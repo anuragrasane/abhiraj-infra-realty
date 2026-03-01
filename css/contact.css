@@ -1,0 +1,755 @@
+.herosection {
+  padding: 6rem 0;
+  background-color: #E3E0DB;
+}
+.herosection .title h1 {
+  color: #3F3F3B;
+}
+.herosection .title h1 strong {
+  font-family: "MontBold";
+}
+.herosection .desc {
+  margin: 25px 0;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+.herosection .desc p {
+  margin: 0;
+  padding: 0;
+}
+.herosection .desc p strong {
+  font-family: "MontBold";
+}
+.herosection .social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.herosection .social a {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 15px;
+}
+
+form .formtitle, .desc .formtitle {
+  position: relative;
+  margin-bottom: 3rem;
+}
+form .formtitle h3, .desc .formtitle h3 {
+  font-family: "MontBold";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  color: #3F3F3B;
+}
+form .formtitle .linedotsingle, .desc .formtitle .linedotsingle {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 5rem;
+  font-size: 0;
+  border-bottom: 1px solid #e5ac53;
+  height: 1px;
+}
+form .formtitle .linedotsingle:after, .desc .formtitle .linedotsingle:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: auto;
+  right: 0;
+  bottom: -3px;
+  font-size: 0;
+  background-color: #e5ac53;
+}
+form .form_group, .desc .form_group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+form .form_group .form_control, .desc .form_group .form_control {
+  margin-top: 10px;
+}
+form .form_group .form_control input[type=text], form .form_group .form_control input[type=number], form .form_group .form_control input[type=email], form .form_group .form_control textarea,
+form .form_group .form_control input:focus-visible, form .form_group .form_control textarea:focus-visible, .desc .form_group .form_control input[type=text], .desc .form_group .form_control input[type=number], .desc .form_group .form_control input[type=email], .desc .form_group .form_control textarea,
+.desc .form_group .form_control input:focus-visible, .desc .form_group .form_control textarea:focus-visible {
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  height: 42px;
+  padding: 0 0;
+  border: 0;
+  border-bottom: 1px solid #000;
+  font-family: "Mont";
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 40px;
+  color: #000;
+}
+form .form_group .form_control textarea, form .form_group .form_control textarea:focus-visible, .desc .form_group .form_control textarea, .desc .form_group .form_control textarea:focus-visible {
+  height: 120px;
+  margin: 5px 0 2rem;
+  line-height: 2.6rem;
+  padding-top: 12px;
+}
+form .form_group .form_control input[type=submit], .desc .form_group .form_control input[type=submit] {
+  width: 100%;
+  height: 60px;
+  background-color: #e5ac53;
+  position: relative;
+  display: inline-block;
+  line-height: 2.8rem;
+  border: 0;
+  font-family: "MontBold";
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  display: inline-block;
+  color: #fff;
+  box-shadow: none;
+  letter-spacing: 1px;
+}
+form .form_group .form_control input[type=submit]:hover, .desc .form_group .form_control input[type=submit]:hover {
+  color: #000;
+}
+form .form_group .form_control .submit label:hover:after, .desc .form_group .form_control .submit label:hover:after {
+  background-color: #000;
+}
+form .form_group .form_control .robot, .desc .form_group .form_control .robot {
+  border: 1px solid #000;
+  height: 60px;
+}
+form .form_group .form_control .robot .g-recaptcha, .desc .form_group .form_control .robot .g-recaptcha {
+  width: 100%;
+  position: relative;
+}
+form .form_group .form_control input[type=number]::-webkit-outer-spin-button, form .form_group .form_control input[type=number]::-webkit-inner-spin-button, .desc .form_group .form_control input[type=number]::-webkit-outer-spin-button, .desc .form_group .form_control input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+form .form_group .form_control input[type=number], .desc .form_group .form_control input[type=number] {
+  -moz-appearance: textfield;
+}
+form .form_group.group_captch, .desc .form_group.group_captch {
+  display: flex;
+  flex-flow: column;
+}
+form .form_group.group_captch .form_submit.form_submit, .desc .form_group.group_captch .form_submit.form_submit {
+  padding: 0 25%;
+}
+form .form_group.group_captch .form_control.captcha, .desc .form_group.group_captch .form_control.captcha {
+  margin: 0;
+}
+form .form_group.group_captch .form_control.captcha .robot, .desc .form_group.group_captch .form_control.captcha .robot {
+  border: 0;
+  height: auto;
+  width: auto;
+}
+form .form_group.textarea, .desc .form_group.textarea {
+  grid-template-columns: 1fr;
+}
+form #formsubmitmsg, .desc #formsubmitmsg {
+  margin-top: 25px;
+  text-align: center;
+}
+form form .form_group .form_control textarea, .desc form .form_group .form_control textarea {
+  margin-bottom: 1rem;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+.linetitle {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.linedot {
+  width: 60%;
+  height: 1px;
+  display: block;
+  position: relative;
+  font-size: 0;
+  margin: 0 0 0 40%;
+  position: absolute;
+  left: 0;
+  top: 14px;
+}
+
+.linedot:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #e5ac53;
+  font-size: 0;
+  border-radius: 0;
+}
+
+.linedot:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  top: 2px;
+  width: 200%;
+  height: 1px;
+  background-color: #e5ac53;
+  font-size: 0;
+}
+
+.projectLocator {
+  padding: 8rem 0 10rem;
+  position: relative;
+  margin-top: 140px;
+}
+.projectLocator .navsection {
+  display: flex;
+  gap: 0 16%;
+  margin-top: 6rem;
+}
+.projectLocator .navsection ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.projectLocator .navsection ul li {
+  margin: 0 0 20px;
+  display: block;
+  position: relative;
+}
+.projectLocator .navsection ul li a {
+  font-family: "Mont";
+  font-weight: 400;
+  color: #000;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin: 0;
+  padding: 0 0;
+  position: relative;
+}
+.projectLocator .navsection ul li span {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  margin-top: 15px;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 2px;
+  background-color: #e5ac53;
+  font-size: 0;
+  transition: all 0.2s linear 0s;
+  opacity: 0;
+}
+.projectLocator .navsection ul li:hover span, .projectLocator .navsection ul li.active span {
+  width: 100%;
+  opacity: 1;
+}
+.projectLocator .navsection .insidemenu ul {
+  display: none;
+}
+.projectLocator .maping {
+  margin: 6rem 0 0;
+  position: relative;
+}
+.projectLocator .maping .points {
+  width: 34px;
+  height: 34px;
+  margin: -34px 0 0 -17px;
+  position: absolute;
+  display: none;
+}
+.projectLocator .maping .points1 {
+  left: 36%;
+  top: 46%;
+}
+.projectLocator .maping .points2 {
+  left: 36%;
+  top: 39.5%;
+}
+.projectLocator .maping .points3 {
+  left: 51%;
+  top: 35%;
+}
+.projectLocator .maping .points4 {
+  left: 37.5%;
+  top: 53%;
+}
+.projectLocator .maping .points5 {
+  left: 35%;
+  top: 36%;
+}
+.projectLocator .maping .points6 {
+  left: 58%;
+  top: 42%;
+}
+.projectLocator .maping .points22 {
+  left: 34.5%;
+  top: 54%;
+}
+.projectLocator .maping .points23 {
+  left: 58%;
+  top: 67%;
+}
+.projectLocator .maping .points24 {
+  left: 51%;
+  top: 52%;
+}
+.projectLocator .maping .points25 {
+  left: 31%;
+  top: 41.5%;
+}
+.projectLocator .maping .points26 {
+  left: 30%;
+  top: 42%;
+}
+.projectLocator .maping .points27 {
+  left: 32%;
+  top: 41%;
+}
+.projectLocator .maping .points31 {
+  left: 62%;
+  top: 43%;
+}
+.projectLocator .maping .points32 {
+  left: 57%;
+  top: 31%;
+}
+.projectLocator .maping .points33 {
+  left: 16%;
+  top: 54%;
+}
+.projectLocator .maping .points34 {
+  left: 75%;
+  top: 77%;
+}
+.projectLocator .maping .points35 {
+  left: 18%;
+  top: 87%;
+}
+.projectLocator .maping .points36 {
+  left: 81%;
+  top: 82%;
+}
+.projectLocator .maping .points37 {
+  left: 82%;
+  top: 75%;
+}
+.projectLocator .maping .points38 {
+  left: 23%;
+  top: 23.5%;
+}
+.projectLocator .maping .points39 {
+  left: 23%;
+  top: 23.5%;
+}
+
+.faqs {
+  background-color: #3F3F3B;
+  padding: 6rem 0;
+}
+.faqs .linetitle {
+  margin-bottom: 50px;
+}
+.faqs .linetitle h2 {
+  color: #fff;
+}
+.faqs .linetitle h2 strong {
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+}
+.faqs .taba ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.faqs .taba ul li {
+  margin: 0 0 20px;
+  display: block;
+  position: relative;
+}
+.faqs .taba ul li a {
+  font-family: "Mont";
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin: 0;
+  padding: 0 0;
+}
+.faqs .taba ul li span {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 15px;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 2px;
+  background-color: #e5ac53;
+  font-size: 0;
+  transition: all 0.2s linear 0s;
+  opacity: 0;
+}
+.faqs .taba ul li:hover span, .faqs .taba ul li.active span {
+  width: 100%;
+  opacity: 1;
+}
+.faqs .tabcontent {
+  padding-bottom: 2rem;
+  display: none;
+}
+.faqs .tabcontent h3 {
+  font-family: "MontBold";
+  color: #fff;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  margin: 0;
+  padding: 0 0 2rem;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #fff;
+  position: relative;
+}
+.faqs .tabcontent h3:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  font-size: 0;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+}
+.faqs .accorddiv {
+  border-bottom: 1px solid #e5ac53;
+}
+.faqs .accorddiv .accordhead {
+  height: auto;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.faqs .accorddiv .accordhead:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  transform: rotate(45deg);
+  transition: all 0.3s linear;
+}
+.faqs .accorddiv .accordhead h4 {
+  font-family: "Mont";
+  font-weight: 400;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin: 0;
+  padding: 0 30px 0 0;
+}
+.faqs .accorddiv .accorddesc {
+  display: none;
+  padding: 1rem 0 1.5rem;
+}
+.faqs .accorddiv .accorddesc p {
+  color: #fff;
+}
+.faqs .accorddiv .accorddesc ul li {
+  position: relative;
+}
+.faqs .accorddiv .accorddesc ul li:after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  position: absolute;
+  left: -14px;
+  top: 8px;
+}
+.faqs .accordshow .accordhead:after {
+  transform: rotate(225deg);
+}
+
+.careers {
+  padding: 8rem 0;
+}
+.careers .linetitle {
+  margin-bottom: 40px;
+}
+.careers .jointitle {
+  margin-bottom: 40px;
+}
+.careers .boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+.careers .boxes .box {
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  gap: 0;
+  flex-flow: column;
+  justify-content: space-between;
+  background-color: #3F3F3B;
+  padding: 25px;
+  position: relative;
+  transition: all 0.3s linear 0s;
+}
+.careers .boxes .box .dotline {
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: relative;
+  font-size: 0;
+  margin: 15px 0 22px -25px;
+}
+.careers .boxes .box .dotline:before {
+  content: "";
+  position: absolute;
+  left: atuo;
+  right: 0;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #e5ac53;
+  font-size: 0;
+  border-radius: 0;
+}
+.careers .boxes .box .dotline:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  top: 2px;
+  width: 100%;
+  height: 1px;
+  background-color: #e5ac53;
+  font-size: 0;
+}
+.careers .boxes .box h4 {
+  font-family: "MontSemiBold";
+  color: #fff;
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  margin: 0;
+  padding: 0 0 0;
+}
+.careers .boxes .box .desc {
+  width: 100%;
+}
+.careers .boxes .box .desc p {
+  color: #fff;
+}
+.careers .boxes .box .desc .viewbtn {
+  width: 100%;
+}
+.careers .boxes .box .desc .viewbtn a {
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 15px;
+  position: relative;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.careers .boxes .box .desc .viewbtn a:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translateX(-50%);
+  background: #e5ac53;
+  transition: all 0.2s linear 0s;
+}
+.careers .boxes .box:hover {
+  background-color: #E3DFD9;
+}
+.careers .boxes .box:hover h4 {
+  color: #3F3F3B;
+}
+.careers .boxes .box:hover .desc p {
+  color: #3F3F3B;
+}
+.careers .boxes .box:hover .desc .viewbtn a {
+  color: #3F3F3B;
+}
+.careers .boxes .box:hover .desc .viewbtn a:after {
+  width: 100%;
+}
+
+.popform {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 100%;
+  width: 100%;
+  z-index: 1111111;
+}
+.popform .closebtn {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  font-size: 0;
+  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+.popform .closebtn:after, .popform .closebtn:before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: #e5ac53;
+}
+.popform .closebtn:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.popform .inside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  padding: 0 0;
+}
+.popform .inside form {
+  padding: 60px 60px 60px 40px;
+  background-color: #fff;
+}
+.popform .inside .desc {
+  padding: 60px 40px 60px 60px;
+  background-color: #3F3F3B;
+}
+.popform .inside .desc .jobdesc {
+  display: none;
+}
+.popform .inside .desc p {
+  color: #fff;
+}
+.popform .inside .desc h3 {
+  color: #fff;
+}
+.popform .inside .desc h6 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #fff;
+  font-family: "MontSemiBold";
+  margin-top: 20px;
+  display: block;
+}
+.popform .inside .desc ul li {
+  list-style-type: disc;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #fff;
+  font-family: "Mont";
+}
+
+@media only screen and (max-width: 768px) {
+  .herosection {
+    margin-top: 60px;
+  }
+  .herosection form {
+    margin-top: 40px;
+  }
+  .projectLocator {
+    margin-top: 60px;
+  }
+  .projectLocator .navsection ul li {
+    margin-bottom: 10px;
+  }
+  .faqs .taba ul {
+    margin-bottom: 20px;
+  }
+  .faqs .taba ul li {
+    margin-bottom: 10px;
+  }
+  .faqs .taba ul li a {
+    font-size: 1.8rem;
+  }
+  .careers .boxes {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .careers .boxes .box {
+    padding: 15px;
+  }
+  .careers .boxes .box .dotline {
+    margin-left: -15px;
+  }
+  .linedot {
+    width: 40%;
+    margin-left: 60%;
+  }
+  .popform .closebtn {
+    width: 20px;
+    height: 20px;
+  }
+  .popform .closebtn:after, .popform .closebtn:before {
+    width: 20px;
+    background-color: #fff;
+  }
+  .popform .inside {
+    grid-template-columns: 1fr;
+    width: 300px;
+    height: 70vh;
+    overflow-y: scroll;
+  }
+  .popform .inside form {
+    padding: 30px 30px 30px 15px;
+  }
+  .popform .inside .desc {
+    padding: 30px 15px 30px 30px;
+  }
+  form .robot, form input[type=submit] {
+    height: 48px !important;
+  }
+  form .form_group.group_captch .form_control.captcha .robot {
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=contact.css.map */

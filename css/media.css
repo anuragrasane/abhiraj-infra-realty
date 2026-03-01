@@ -1,0 +1,307 @@
+.herosection {
+  margin-top: 140px;
+  padding: 8rem 0;
+}
+
+.linetitle {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.linedot {
+  width: 60%;
+  height: 1px;
+  display: block;
+  position: relative;
+  font-size: 0;
+  margin: 0 0 2rem 40%;
+  position: absolute;
+  left: 0;
+  top: 14px;
+}
+
+.linedot:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #e5ac53;
+  font-size: 0;
+  border-radius: 0;
+}
+
+.linedot:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  top: 2px;
+  width: 200%;
+  height: 1px;
+  background-color: #e5ac53;
+  font-size: 0;
+}
+
+.pressmainbox {
+  display: flex;
+  gap: 0 80px;
+  margin-top: 6rem;
+}
+.pressmainbox .pressbox {
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+}
+.pressmainbox .pressbox h4 {
+  font-family: "Mont";
+  font-size: 3.4rem;
+  line-height: 3.8rem;
+  color: #e5ac53;
+}
+.pressmainbox .pressbox p {
+  margin: 2rem 0 3rem;
+}
+.pressmainbox .pressbox .midday {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pressmainbox .pressbox .midday span {
+  font-family: "Mont";
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #e5ac53;
+}
+.pressmainbox .pressbox .midday a {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: transparent;
+}
+.pressmainbox .pressbox .midday a span {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border: solid #e5ac53 !important;
+  border-width: 3px 3px 0 0 !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  font-size: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.pressmainbox .pressbox:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+  font-size: 0;
+  position: absolute;
+  left: auto;
+  right: -40px;
+  top: 0;
+}
+.pressmainbox .pressbox:last-child:after {
+  display: none;
+}
+
+.soicalimpact {
+  margin-top: 2rem;
+}
+.soicalimpact .banner {
+  position: relative;
+  margin-top: 6rem;
+}
+.soicalimpact .banner .desc {
+  width: 60%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 8rem 8rem 3rem 0;
+  background-color: #fff;
+}
+.soicalimpact .banner .desc h4 {
+  font-family: "NexaBold";
+  font-size: 3.4rem;
+  line-height: 4rem;
+  margin-bottom: 1rem;
+}
+.soicalimpact .banner .desc p {
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+.soicalimpact .content h6 {
+  font-family: "Mont";
+  font-size: 2rem;
+  line-height: 2.6rem;
+  padding: 0;
+}
+.soicalimpact .content h6 strong {
+  font-family: "MontBold";
+}
+.soicalimpact .content ul {
+  padding-left: 20px;
+  margin-top: 1rem;
+}
+.soicalimpact .content ul li {
+  position: relative;
+  font-family: "Mont";
+  font-size: 2rem;
+  line-height: 2.6rem;
+  margin-bottom: 1rem;
+}
+.soicalimpact .content ul li:after {
+  content: "";
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #e5ac53;
+  font-size: 0;
+  border-radius: 0;
+  left: -20px;
+  top: 1rem;
+}
+.soicalimpact .socialmainbox {
+  margin-top: 5rem;
+}
+.soicalimpact .socialmainbox .socialbox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 80px;
+  padding: 5rem 0;
+  border-bottom: 1px solid #000;
+}
+.soicalimpact .socialmainbox .socialbox .desc {
+  padding-right: 20px;
+}
+.soicalimpact .socialmainbox .socialbox .desc h5 {
+  font-family: "Mont";
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  color: #000;
+  padding-bottom: 1rem;
+}
+.soicalimpact .socialmainbox .socialbox .desc h5 strong {
+  font-family: "MontBold";
+}
+.soicalimpact .socialmainbox .socialbox .desc p {
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+.soicalimpact .socialmainbox .socialbox .img {
+  width: 100%;
+  display: flex;
+  padding-right: 40%;
+  transition: all 0.3s linear;
+}
+.soicalimpact .socialmainbox .socialbox:last-child {
+  border: 0;
+}
+.soicalimpact .socialmainbox .socialbox:hover .img {
+  padding-right: 0;
+}
+
+.companyupdates {
+  padding: 12rem 0;
+}
+.companyupdates .companyupdatesslider {
+  margin-top: 50px;
+}
+.companyupdates .companyupdatesslider .slide {
+  overflow: hidden;
+}
+.companyupdates .companyupdatesslider .companyupdatesbox {
+  display: flex;
+  align-items: center;
+  padding: 7rem 20px;
+  position: relative;
+  z-index: 1;
+}
+.companyupdates .companyupdatesslider .companyupdatesbox .img {
+  width: 44%;
+  position: relative;
+}
+.companyupdates .companyupdatesslider .companyupdatesbox .img img {
+  width: 100%;
+}
+.companyupdates .companyupdatesslider .companyupdatesbox .space {
+  width: 12%;
+}
+.companyupdates .companyupdatesslider .companyupdatesbox .desc {
+  width: 44%;
+}
+.companyupdates .companyupdatesslider .companyupdatesbox .desc h4 {
+  font-family: 2.6rem;
+  line-height: 3.2rem;
+  color: #000;
+  font-family: "MontBold";
+}
+.companyupdates .btnslider {
+  position: relative;
+}
+.companyupdates .btnslider .arrows {
+  right: 0;
+}
+.companyupdates .btnslider .arrows button:hover {
+  border-color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .herosection {
+    margin-top: 60px;
+  }
+  .linedot {
+    width: 40%;
+    margin: 0 0 2rem 60%;
+  }
+  .pressmainbox {
+    flex-flow: column;
+  }
+  .pressmainbox .pressbox:after {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    right: inherit;
+    top: auto;
+    bottom: 0;
+  }
+  .soicalimpact .banner .desc {
+    width: 100%;
+    position: relative;
+    left: inherit;
+    bottom: inherit;
+    padding: 3rem 0 3rem 0;
+  }
+  .soicalimpact .socialmainbox .socialbox {
+    grid-template-columns: 1fr;
+  }
+  .soicalimpact .socialmainbox .socialbox .img {
+    padding: 0;
+  }
+  .soicalimpact .socialmainbox .socialbox .desc {
+    padding: 20px 0;
+  }
+  .companyupdates .companyupdatesslider .companyupdatesbox {
+    flex-direction: column;
+  }
+  .companyupdates .companyupdatesslider .companyupdatesbox .img {
+    width: 100%;
+  }
+  .companyupdates .companyupdatesslider .companyupdatesbox .img:after {
+    height: calc(100% + 60px);
+    top: -30px;
+  }
+  .companyupdates .companyupdatesslider .companyupdatesbox .desc {
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 20px;
+  }
+}/*# sourceMappingURL=media.css.map */

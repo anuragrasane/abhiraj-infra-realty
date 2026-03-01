@@ -1,0 +1,218 @@
+select {
+    width: 100% !important;
+}
+
+.selectproject-selectBox-dropdown-menu, .insideselectbox-selectBox-dropdown-menu { z-index: 11111111111 !important; }
+
+.selectproject-selectBox-dropdown-menu li:first-child, .insideselectbox-selectBox-dropdown-menu li:first-child  { display: none !important; }
+.insideselectbox { display: none !important; }
+.insideselectbox.active { display: block !important; }
+.insideselectbox, .insideselectbox .selectBox-label { border-color: #e5ac53 !important; }
+.selectform .form_control:last-child .selectBox-arrow { border-color: #212120 !important;  }
+/* Dropdown control */
+form .selectform { grid-template-columns: 1fr !important; grid-gap:0px !important; }
+/*.selectform .form_control { display: flex; }*/
+.selectBox-dropdown {
+    width: 100% !important;
+    /*padding: 5px 40px 6px 15px !important;*/
+    /*padding: 12px 40px 12px 15px !important;*/
+    position: relative;
+    border: 0;
+    text-decoration: none;
+    text-align: left;
+    color: #000;
+    outline: none;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: default;
+    cursor: pointer;
+    border: 0px !important;
+    height: auto;
+    /*background: #f7f7f7;*/
+    border: 1px solid #f7f7f7;
+    font-family: "Mont";
+    width: 100%;
+    height: 42px;
+    padding: 0 0;
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-family: "Mont";
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 40px;
+    color: #000;
+}
+
+.selectBox-dropdown .selectBox-label {
+    width: 100% !important;
+    padding: 0px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 16px;
+    border: 0px;
+    color: #212120 !important;
+    font-family: "Mont";
+    /*line-height: 20px;*/
+
+    width: 100%;
+    height: 42px;
+    padding: 0 0;
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-family: "Mont";
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 40px;
+    color: #000;
+}
+.selectBox-arrow  {
+    display: inline-block;
+    content: "";
+    box-sizing: border-box;
+    height: 12px;
+    width: 12px;
+    border-style: solid;
+    border-color: #212120;
+    border-width: 0px 2px 2px 0px;
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 40%;
+    transform: translateY(-50%) rotate(45deg);
+    transition-duration: 0.5s;
+}
+
+
+
+.selectBox-dropdown.selectBox-menuShowing .selectBox-arrow{top: 56%; transform: translateY(-50%) rotate(-135deg);}
+
+
+
+#by_year .selectBox-dropdown .selectBox-label:before {
+    background: url('../images/media/calender_icon.png') no-repeat left top;
+    background-size: cover;
+    width: 21px;
+    height: 22px;
+    top: 5px;
+}
+#by_category .selectBox-dropdown .selectBox-label:before {
+    background: url('../images/media/category_icon.png') no-repeat left top;
+    background-size: cover;
+    width: 19px;
+    height: 19px;
+    top: 6px;
+}
+
+/* Dropdown menu */
+.selectBox-dropdown-menu {
+    position: absolute;
+    z-index: 99999;
+    max-height: 220px;
+    min-height: 1em;
+    padding-top: 0px !important;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #fff;
+    margin: 0 0px !important;
+    background: #fff;
+    border:0px solid #f7f7f7;
+}
+
+/* Inline control */
+.selectBox-inline {
+    min-width: 150px;
+    outline: none;
+    border: solid 1px #BBB;
+    background: #FFF;
+    display: inline-block;
+    overflow: auto;
+}
+
+.selectBox-inline:focus {
+    border-color: #666;
+}
+
+/* Options */
+.selectBox-options,
+.selectBox-options LI,
+.selectBox-options LI A {
+    list-style: none;
+    display: block;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+
+.selectBox-options LI A {
+    line-height: 1.5;
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Avenir-Roman';
+    font-weight: normal;
+    font-size: 15px;
+    color: #212120 !important;
+    /*background: #fff;*/
+    font-family: "Mont";
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 40px;
+    color: #000;
+}
+/*.selectBox-dropdown-menu li:first-child { display: none !important; }*/
+
+.selectBox-options LI.selectBox-selected a, .selectBox-options LI:hover a {
+    color: #fff !important;
+    background: #e5ac53 !important;   
+}
+
+.selectBox-options LI.selectBox-disabled A {
+    color: #888;
+    background-color: transparent;
+}
+
+.selectBox-options .selectBox-optgroup {
+    color: #666;
+    background: #EEE;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 0 .3em;
+    white-space: nowrap;
+}
+
+/* Disabled state */
+.selectBox.selectBox-disabled {
+    color: #888 !important;
+}
+
+.selectBox-dropdown.selectBox-disabled .selectBox-arrow {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    border-color: #666;
+}
+
+.selectBox-inline.selectBox-disabled {
+    color: #888 !important;
+}
+
+.selectBox-inline.selectBox-disabled .selectBox-options A {
+    background-color: transparent !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+.selectbox_main {position: absolute; left: 0; top: -27px; z-index: 9999; padding: 0 25px;}
+.selectBox-dropdown {padding: 0 0 !important;background: transparent;}
+.selectBox-dropdown .selectBox-label {font-size: 12px; line-height: inherit; padding: 0; color: #212120 !important;}
+.selectBox-dropdown .selectBox-label:after {width: 24px; height: 24px; border-radius: 12px; top: 3px; right: 3px; }
+.selectBox-dropdown .selectBox-arrow {padding: 3px; right: 15px; top: calc(50% - 3px); width: 9px; height: 9px;border-color: #212120 !important;}
+.selectBox-options LI {padding: 0 0; background: #fff;}
+.selectBox-options LI A {font-size: 12px; padding: 0 15px; border-bottom: 1px solid #fff; font-family: "Mont"; background: #fff; color: #212120 !important;}
+.selectBox-options LI.selectBox-selected a, .selectBox-options LI:hover a {background: #e5ac53 !important; color: #fff !important;}
+.selectBox-options li:last-child a {border: 0; }
+.selectBox-dropdown-menu {margin: 0 !important; border:0 !important; min-height: inherit !important; max-height:inherit !important;}
+
+}

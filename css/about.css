@@ -1,0 +1,572 @@
+.main2Banner {
+  position: relative;
+}
+.main2Banner .AboutSlider {
+  width: 100%;
+  height: calc(100vh - 140px);
+  margin-top: 140px;
+}
+.main2Banner .AboutSlider .banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../images/about/banner/banner_01.jpg) no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 140px);
+}
+.main2Banner .content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+}
+.main2Banner .content .description {
+  display: flex;
+  flex-flow: column;
+  width: 76%;
+}
+.main2Banner .content .description h1 {
+  color: #fff;
+  font-family: var(--NexaBold);
+  margin-bottom: 20px;
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+.main2Banner .content .description h1 small {
+  font-size: 35%;
+}
+
+.ourStory {
+  padding: 12rem 0 10rem;
+}
+.ourStory .box {
+  position: relative;
+  padding: 8rem 0px;
+  margin-top: 45px;
+}
+.ourStory .box .boxborder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e5ac53;
+}
+.ourStory .box .title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-flex;
+  background-color: #fff;
+  width: auto;
+  top: -45px;
+  left: -2px;
+  padding: 0 35px 45px 0;
+}
+.ourStory .box .descmain {
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+}
+.ourStory .box .descmain .titledesc {
+  width: 50%;
+  position: relative;
+  left: -2px;
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+.ourStory .box .descmain .titledesc h3 {
+  color: #3f3f3b;
+  font-family: var(--QuicheSans);
+  font-size: 4.2rem;
+  line-height: 5rem;
+}
+.ourStory .box .descmain .desc {
+  width: 38%;
+  margin-left: 4%;
+}
+.ourStory .box .descmain .desc p {
+  color: #3f3f3b;
+  padding-bottom: 20px;
+}
+
+.ourFounder {
+  background-color: #3f3f3b;
+  padding: 10rem 0;
+  overflow: hidden;
+}
+.ourFounder .title {
+  margin-bottom: 40px;
+}
+.ourFounder .title h2 {
+  color: #fff;
+}
+.ourFounder .founderdesc {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+.ourFounder .founderdesc img {
+  width: 29%;
+  background-color: #e3e0db;
+}
+.ourFounder .founderdesc .desc {
+  position: relative;
+  width: 71%;
+  padding: 0 0 0 8.33%;
+}
+.ourFounder .founderdesc .desc small {
+  font-family: var(--NexaRegular);
+  letter-spacing: 6px;
+}
+.ourFounder .founderdesc .desc p {
+  color: #fff;
+}
+.ourFounder .founderdesc .desc p strong {
+  font-family: var(--NexaBold);
+}
+.ourFounder .founderdesc .desc .linedot {
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: relative;
+  font-size: 0;
+  margin: 10px 0 20px;
+}
+.ourFounder .founderdesc .desc .linedot:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #e5ac53;
+  font-size: 0;
+  border-radius: 0;
+}
+.ourFounder .founderdesc .desc .linedot:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  top: 2px;
+  width: 200%;
+  height: 1px;
+  background-color: #e5ac53;
+  font-size: 0;
+}
+.ourFounder .founderdesc.right {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+.ourFounder .founderdesc.right img {
+  width: 29%;
+  background-color: #e3e0db;
+}
+.ourFounder .founderdesc.right .desc {
+  padding: 0 8.33% 0 0;
+  text-align: right;
+}
+.ourFounder .founderdesc.right .desc p {
+  color: #fff;
+}
+.ourFounder .founderdesc.right .desc .linedot {
+  position: relative;
+  right: 0;
+}
+.ourFounder .founderdesc.right .desc .linedot:before {
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 0;
+}
+.ourFounder .founderdesc.right .desc .linedot:after {
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 0;
+  top: 2px;
+}
+
+.what_we_specialise {
+  padding: 10rem 0 6rem;
+}
+.what_we_specialise .title {
+  position: relative;
+  width: 50%;
+}
+.what_we_specialise .title h2 {
+  position: relative;
+  background: #fff;
+  padding: 0;
+  display: inline-block;
+  padding-right: 8%;
+}
+.what_we_specialise .title span {
+  position: absolute;
+  right: -36px;
+  width: 100%;
+  height: 2px;
+  top: calc(50% - 0px);
+  transform: translateY(-50%);
+  background: #e5ac53;
+  z-index: -1;
+}
+.what_we_specialise .title:after {
+  content: "";
+  position: absolute;
+  right: -36px;
+  top: 50%;
+  width: 2px;
+  height: 100%;
+  background: #e5ac53;
+}
+.what_we_specialise .mainimgdesc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.what_we_specialise .mainimgdesc .inside .imgdesc {
+  display: flex;
+  align-items: flex-start;
+}
+.what_we_specialise .mainimgdesc .inside .imgdesc img {
+  width: 70px;
+}
+.what_we_specialise .mainimgdesc .inside .imgdesc .desc {
+  width: calc(100% - 70px);
+  padding: 0 20% 0 8.33%;
+}
+.what_we_specialise .mainimgdesc .inside .imgdesc .desc h5 {
+  font-family: var(--NexaBold);
+  color: #3f3f3b;
+}
+.what_we_specialise .mainimgdesc .inside .imgdesc .desc p {
+  color: #3f3f3b;
+  min-height: 105px;
+  margin: 0;
+  padding: 0;
+}
+.what_we_specialise .mainimgdesc .inside .linebetween {
+  height: 70px;
+  padding: 0 0 17px;
+  margin-bottom: 40px;
+}
+.what_we_specialise .mainimgdesc .inside .linebetween span {
+  width: 2px;
+  height: 100%;
+  background: #e5ac53;
+  border-right: 2px solid #e5ac53;
+  display: inline-block;
+  margin: 0 0 0 34px;
+}
+.what_we_specialise .mainimgdesc .inside .linebetweenbig {
+  height: 95px;
+  position: relative;
+}
+.what_we_specialise .mainimgdesc .inside .linebetweenbig2 {
+  height: 80px;
+}
+.what_we_specialise .mainimgdesc .inside .linebetweenbig3 {
+  position: relative;
+}
+.what_we_specialise .mainimgdesc .inside .linebetweenbig3:after {
+  width: calc(100% - 0px);
+  height: 2px;
+  background: #e5ac53;
+  border-top: 2px solid #e5ac53;
+  content: "";
+  position: absolute;
+  left: 34px;
+  bottom: 17px;
+}
+
+.about_our_envir {
+  position: relative;
+  padding: 8rem 0;
+  overflow: hidden;
+}
+.about_our_envir:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #3f3f3b;
+  z-index: -1;
+}
+.about_our_envir .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_our_envir .row .desc {
+  padding-right: 8.333%;
+}
+.about_our_envir .row .desc h2 {
+  color: #fff;
+}
+.about_our_envir .row .desc p {
+  color: #fff;
+  font-family: var(--Mont);
+}
+.about_our_envir .row .desc .linedot {
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: relative;
+  font-size: 0;
+  margin: 20px 0 30px;
+}
+.about_our_envir .row .desc .linedot:before {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #e5ac53;
+  font-size: 0;
+  border-radius: 0;
+}
+.about_our_envir .row .desc .linedot:after {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 0;
+  top: 2px;
+  width: 200%;
+  height: 1px;
+  background-color: #e5ac53;
+  font-size: 0;
+}
+
+.missionvision {
+  margin: 10rem 0;
+  overflow: hidden;
+}
+.missionvision .missionvisionmain {
+  position: relative;
+}
+.missionvision .missionvisioncontent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+.missionvision .missionvisioncontent .missionvisiondesc {
+  padding: 0 8.33%;
+}
+.missionvision .missionvisioncontent .missionvisiondesc .titlemain {
+  position: relative;
+  margin-bottom: 20px;
+}
+.missionvision .missionvisioncontent .missionvisiondesc .titlemain h4 {
+  position: relative;
+  color: #fff;
+  font-family: var(--NexaBold);
+  text-align: center;
+  padding: 0;
+}
+.missionvision .missionvisioncontent .missionvisiondesc .titlemain .linedot {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  top: 52%;
+  width: 40%;
+  height: 2px;
+  display: block;
+  font-size: 0;
+}
+.missionvision .missionvisioncontent .missionvisiondesc .titlemain .linedot:before {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 0;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  background-color: #e5ac53;
+  font-size: 0;
+  border-radius: 0;
+}
+.missionvision .missionvisioncontent .missionvisiondesc .titlemain .linedot:after {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 0;
+  width: 200%;
+  height: 1px;
+  background-color: #e5ac53;
+  font-size: 0;
+  opacity: 1;
+}
+.missionvision .missionvisioncontent .missionvisiondesc p {
+  color: #fff;
+}
+.missionvision .missionvisioncontent .missionvisiondesc.right .titlemain .linedot {
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.missionvision .missionvisioncontent .missionvisiondesc.right .titlemain .linedot:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  top: -2px;
+}
+.missionvision .missionvisioncontent .missionvisiondesc.right .titlemain .linedot:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .main2Banner .AboutSlider {
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+  }
+  .main2Banner .AboutSlider .banner {
+    height: calc(100vh - 60px);
+  }
+  .main2Banner .content .description {
+    padding: 20px 20px 20px 15px;
+  }
+  .main2Banner .content .description h1 {
+    padding: 20px 0 0 0;
+    font-size: 3.6rem;
+    line-height: 4.2rem;
+  }
+  .ourStory {
+    padding: 10rem 15px 8rem;
+  }
+  .ourStory .box .descmain {
+    flex-flow: column;
+  }
+  .ourStory .box .descmain .titledesc {
+    width: 100%;
+  }
+  .ourStory .box .descmain .desc {
+    width: 100%;
+    margin: 0 0 0 -2px;
+    background-color: #fff;
+    padding: 0 20px 0 2px;
+  }
+  .ourFounder {
+    padding: 8rem 15px 7rem;
+  }
+  .ourFounder .title {
+    margin-bottom: 0;
+  }
+  .ourFounder .founderdesc {
+    margin-top: 30px;
+    align-items: flex-start;
+  }
+  .ourFounder .founderdesc img {
+    width: calc(50% - 15px);
+  }
+  .ourFounder .founderdesc .desc {
+    width: calc(50% + 15px);
+    padding: 0 0 0 30px;
+  }
+  .ourFounder .founderdesc .desc p {
+    line-height: 1.6rem;
+    padding-bottom: 6px;
+  }
+  .ourFounder .founderdesc .desc p:nth-child(4) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    padding-bottom: 6px;
+  }
+  .ourFounder .founderdesc .desc .linedot {
+    margin: 0 0 10px;
+  }
+  .ourFounder .founderdesc.right {
+    align-items: flex-start;
+  }
+  .ourFounder .founderdesc.right img {
+    width: calc(50% - 15px);
+  }
+  .ourFounder .founderdesc.right .desc {
+    width: calc(50% + 15px);
+    padding: 0 30px 0 0;
+  }
+  .what_we_specialise {
+    padding: 10rem 15px 12rem;
+  }
+  .what_we_specialise .title {
+    width: 100%;
+    position: inherit;
+  }
+  .what_we_specialise .title:after, .what_we_specialise .title span {
+    display: none;
+  }
+  .what_we_specialise .mainimgdesc {
+    padding: 0 0;
+    box-sizing: border-box;
+    grid-template-columns: 1fr;
+  }
+  .what_we_specialise .mainimgdesc .inside .imgdesc img {
+    width: 40px;
+  }
+  .what_we_specialise .mainimgdesc .inside .imgdesc .desc {
+    width: calc(100% - 40px);
+    padding: 0 8.33% 0 8.33%;
+  }
+  .what_we_specialise .mainimgdesc .inside .imgdesc .desc p {
+    min-height: auto;
+    height: 28px;
+  }
+  .what_we_specialise .mainimgdesc .inside .linebetween {
+    height: 40px;
+    padding: 0 0 15px;
+    margin-bottom: 15px;
+  }
+  .what_we_specialise .mainimgdesc .inside .linebetween span {
+    margin: 0 0 0 19px;
+    width: 1px;
+  }
+  .what_we_specialise .mainimgdesc .inside .linebetweenbig {
+    display: none;
+  }
+  .about_our_envir {
+    padding: 8rem 15px;
+  }
+  .about_our_envir .row .desc {
+    padding-right: 25%;
+  }
+  .about_our_envir .row .desc .linedot {
+    margin: 10px 0 20px;
+  }
+  .about_our_envir:after {
+    height: 60%;
+    width: 100%;
+  }
+  .missionvision {
+    margin: 1rem 0 8rem;
+    padding: 0 15px;
+  }
+  .missionvision .missionvisioncontent .missionvisiondesc .titlemain {
+    margin-bottom: 10px;
+  }
+  .missionvision .missionvisioncontent .missionvisiondesc .titlemain .linedot {
+    width: 25%;
+  }
+}/*# sourceMappingURL=about.css.map */
