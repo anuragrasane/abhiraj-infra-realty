@@ -253,7 +253,7 @@ header nav ul li a.navlink.active span {
 }
 
 footer {
-  background-color: #3f3f3b;
+  background-color: #4e4d55;
   z-index: 1111;
 }
 footer .footertop {
@@ -278,8 +278,12 @@ footer .footertop .getin ul li {
   display: flex;
 }
 footer .footertop .getin ul li a {
-  color: #e3e0db;
+  color: #e8e5e0;
   position: relative;
+  transition: color 0.3s ease;
+}
+footer .footertop .getin ul li a:hover {
+  color: #e5ac53;
 }
 footer .footertop .getin ul li a span {
   content: "";
@@ -612,7 +616,7 @@ footer .copyright p a {
 }
 .privacy .inside {
   overflow: hidden;
-  background-color: #fff;
+  background-color: #fafaf8;
   overflow-y: auto;
   position: fixed;
   left: 100px;
@@ -623,13 +627,17 @@ footer .copyright p a {
 }
 .privacy .inside .desc p {
   margin-bottom: 18px;
+  color: #2a2a28;
+  line-height: 1.8;
 }
 .privacy .inside .desc p strong {
   font-family: "MontBold";
+  color: #1a1a18;
 }
-.privacy .inside .desc ul {
-  margin-bottom: 18px;
+.privacy .inside .desc ul li p {
+  margin-bottom: 0;
   padding: 0;
+  color: #2a2a28;
 }
 .privacy .inside .desc ul li p {
   margin-bottom: 0;
@@ -679,11 +687,13 @@ footer .copyright p a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #E3E0DB;
+  background-color: #f5f3f0;
   padding: 50px 50px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 #getintouchpopup .title h1 {
-  color: #3F3F3B;
+  color: #1a1a18;
+  font-weight: 700;
 }
 #getintouchpopup .title h1 strong {
   font-family: "MontBold";
@@ -761,18 +771,19 @@ form .form_group .form_control input:focus-visible, form .form_group .form_contr
   height: 42px;
   padding: 0 0;
   border: 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #2a2a28;
   font-family: "Mont";
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 40px;
-  color: #000;
+  color: #1a1a18;
 }
-form .form_group .form_control textarea, form .form_group .form_control textarea:focus-visible, .desc .form_group .form_control textarea, .desc .form_group .form_control textarea:focus-visible {
-  height: 120px;
-  margin: 5px 0 2rem;
-  line-height: 2.6rem;
-  padding-top: 12px;
+form .form_group .form_control input::placeholder, 
+form .form_group .form_control textarea::placeholder,
+.desc .form_group .form_control input::placeholder,
+.desc .form_group .form_control textarea::placeholder {
+  color: #8b8b87;
+  opacity: 0.8;
 }
 form .form_group .form_control input[type=submit], .desc .form_group .form_control input[type=submit] {
   width: 100%;

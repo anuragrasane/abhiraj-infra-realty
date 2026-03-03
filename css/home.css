@@ -36,17 +36,19 @@
 }
 
 .mainBanner .content .description .desc h4 {
-  color: #3f3f3b;
+  color: #2a2a28;
   font-family: var(--QuicheSans);
   padding-right: 16%;
   padding-bottom: 0;
+  font-weight: 600;
 }
 
 .mainBanner .content .description .desc h6 {
-  color: #3f3f3b;
+  color: #1a1a18;
   padding-right: 10%;
   margin-top: 5px;
   font-family: var(--Mont);
+  font-weight: 600;
 }
 
 .mainBanner .content .description .desc:before {
@@ -272,11 +274,12 @@
 
 .what_we_specialise .mainimgdesc .inside .imgdesc .desc h5 {
   font-family: var(--NexaBold);
-  color: #3f3f3b;
+  color: #1a1a18;
+  font-weight: 700;
 }
 
 .what_we_specialise .mainimgdesc .inside .imgdesc .desc p {
-  color: #3f3f3b;
+  color: #2a2a28;
   min-height: 70px;
   margin: 0;
   padding: 0;
@@ -414,7 +417,7 @@
   bottom: 0;
   width: 120%;
   height: 200%;
-  background-color: #e3e0db;
+  background-color: #f0ede8;
   padding: 0 10%;
   box-sizing: border-box;
 }
@@ -435,7 +438,7 @@
 
 /* ── Our Founders Section ─────────────────────────────── */
 .ourFounder {
-  background-color: #3f3f3b;
+  background-color: #4e4d55;
   padding: 10rem 0;
   overflow: hidden;
 }
@@ -456,7 +459,7 @@
 
 .ourFounder .founderdesc img {
   width: 29%;
-  background-color: #e3e0db;
+  background-color: #f0ede8;
 }
 
 .ourFounder .founderdesc .desc {
@@ -518,7 +521,7 @@
 
 .ourFounder .founderdesc.right img {
   width: 29%;
-  background-color: #e3e0db;
+  background-color: #f0ede8;
 }
 
 .ourFounder .founderdesc.right .desc {
@@ -547,6 +550,14 @@
   left: auto;
   right: 0;
   top: 2px;
+}
+
+.peoplesay .HomepeoplesaySlide .content .desc .description p {
+  color: #1a1a18;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  margin: 0;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 768px) {
