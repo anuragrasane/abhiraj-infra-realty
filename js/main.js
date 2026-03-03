@@ -677,7 +677,7 @@ function submitFromgetintouch(form) {
     if (data.success) {
       $("#contactFormget input:submit").animate({ 'opacity': '0.5' });
       $("#contactFormget input:submit").attr('disabled', 'disabled');
-      $("#contactFormget_msg_status p").fadeIn(0);
+      $("#contactFormget_msg_status p").css('display', 'flex');
     } else {
       alert("Something went wrong. Please try again or call us directly.");
     }
