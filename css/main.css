@@ -884,7 +884,7 @@ footer .copyright p a:hover {
 
   /* Header */
   .header {
-    height: 88px;
+    height: 120px;
   }
 
   header {
@@ -893,7 +893,7 @@ footer .copyright p a:hover {
   }
 
   header .logo img {
-    height: 52px;
+    height: 104px;
   }
 
   /* Mobile hamburger — 3 spans */
@@ -901,7 +901,7 @@ footer .copyright p a:hover {
     display: flex;
     position: fixed;
     right: 16px;
-    top: 18px;
+    top: 36px;
     z-index: 11111;
   }
 
@@ -942,6 +942,10 @@ footer .copyright p a:hover {
   }
 
   /* Mobile getintouch */
+  .getintouch {
+    margin-right: 48px;
+  }
+
   .getintouch a,
   .getinbtn a {
     padding: 8px 14px;

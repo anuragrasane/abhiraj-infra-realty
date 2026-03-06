@@ -237,8 +237,12 @@ a {
 
 /* ── Mobile base ──────────────────────────────────────────── */
 @media (max-width: 768px) {
+    :root {
+        --text-xs: 1.4rem;
+    }
+
     html {
-        font-size: 8px;
+        font-size: 9px;
     }
 
     h1 {
