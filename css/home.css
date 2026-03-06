@@ -870,6 +870,15 @@
     direction: ltr;
   }
 
+  /* Always show photo above text for both founder cards on mobile */
+  .ourFounder .founderdesc.right img {
+    order: -1;
+  }
+
+  .ourFounder .founderdesc.right .desc {
+    order: 1;
+  }
+
   .ourFounder .founderdesc.right .desc {
     text-align: left;
   }
