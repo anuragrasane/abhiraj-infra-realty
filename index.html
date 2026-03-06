@@ -1,52 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Abhiraj Infra Realty</title>
+	<title>Abhiraj Infra Realty | Society Redevelopment Experts in Nashik</title>
 
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-96x96.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="AbhiRaj Infra Realty — Nashik's trusted partner for society redevelopment, joint ventures, and residential project planning. Structured, transparent, and quality-driven." />
+	<meta property="og:title" content="Abhiraj Infra Realty | Society Redevelopment Experts in Nashik" />
+	<meta property="og:description"
+		content="Creating enduring landmarks through responsible redevelopment and uncompromising quality." />
+	<meta property="og:type" content="website" />
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png" />
+
+	<!-- Design System (tokens, fonts, base resets) -->
+	<link rel="stylesheet" type="text/css" href="./css/design-system.css">
+
+	<!-- Vendor styles -->
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap-added.css">
-	<!-- <link rel="stylesheet" type="text/css" href="./css/jquery.lbt-lightbox.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="./css/selectbox.css">
 	<link rel="stylesheet" type="text/css" href="./css/owl.carousel.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/animate.css">
+
+	<!-- Site styles -->
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="stylesheet" type="text/css" href="./css/home.css">
 </head>
 
 <body>
 
-	<div class="header fw">
+	<div class="header fw" role="banner">
+		<div class="header-progress" aria-hidden="true"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<header>
-						<a href="./" class="logo"><img src="./images/logo.png" alt="logo"></a>
+					<header aria-label="Site header">
+						<div class="header-brand">
+							<a href="./" class="logo" aria-label="Abhiraj Infra Realty home">
+								<img src="./images/logo.png" alt="Abhiraj Infra Realty logo">
+							</a>
+							<span class="header-eyebrow hide-xs">Nashik &middot; Est. 2018</span>
+						</div>
 						<div class="getintouch show-xs">
-							<a class="getintouch_popup_link" rel="getintouchpopup" href="javascript:void(0);"><span>GET
-									IN TOUCH</span></a>
+							<a class="getintouch_popup_link header-cta" rel="getintouchpopup"
+								href="javascript:void(0);"><span>GET IN TOUCH</span></a>
 						</div>
-						<div class="humberger">
-							<span>&nbsp;</span>
-							<span>&nbsp;</span>
-							<span>&nbsp;</span>
-							<span>&nbsp;</span>
+						<div class="humberger" aria-label="Toggle navigation" role="button" tabindex="0">
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
-						<nav>
+						<nav aria-label="Primary navigation">
 							<ul>
-								<!-- <li>
-								<a class='navlink' href="./about.html" >ABOUT<span>&nbsp;</span></a>
-							</li>
-							<li>
-								<a class='navlink' href="./contact-us.html" >CONTACT<span>&nbsp;</span></a>
-							</li> -->
+								<!-- Nav links can be added here in future -->
 								<li class="getintouch hide-xs">
-									<a class="getintouch_popup_link" rel="getintouchpopup"
+									<a class="getintouch_popup_link header-cta" rel="getintouchpopup"
 										href="javascript:void(0)"><span>GET IN TOUCH</span></a>
 								</li>
 							</ul>
@@ -58,7 +67,7 @@
 	</div>
 
 
-	<section class="fw mainBanner">
+	<section class="fw mainBanner" aria-label="Hero banner">
 		<div class="fw HomeSlider owl-carousel owl-theme">
 			<div class="banner" id="banner_02">&nbsp;</div>
 			<div class="banner" id="banner_03">&nbsp;</div>
@@ -71,16 +80,16 @@
 			<div class="container">
 				<div class="row">
 					<div class="col pr">
-						<div class="description">
-							<h1 class="wow fadeInLeftBig slow animated delay-1.5s">REDEFINING URBAN LANDSCAPES</h1>
-							<div class="desc fw wow fadeInLeft slow animated delay-2s">
+						<div class="description" data-reveal="left">
+							<h1>Redefining <span class="hero-italic">Urban</span><br>Landscapes</h1>
+							<div class="desc fw">
 								<h4>Creating enduring landmarks through responsible redevelopment and uncompromising
 									quality.</h4>
 							</div>
 						</div>
 						<div class="arrows">
-							<button class="customPrevBtn">&nbsp;</button>
-							<button class="customNextBtn">&nbsp;</button>
+							<button class="customPrevBtn" aria-label="Previous slide">&nbsp;</button>
+							<button class="customNextBtn" aria-label="Next slide">&nbsp;</button>
 						</div>
 					</div>
 				</div>
@@ -88,61 +97,56 @@
 		</div>
 	</section>
 
-	<section class="fw mainmarquee wow fadeInUp slow animated">
+	<section class="fw mainmarquee" aria-hidden="true">
 		<div class="marquee">
 			<div class="track">
-				<div class="content">&nbsp;&nbsp;&nbsp;Planning Society Redevelopment in Nashik? Partner with Structured
-					& Transparent Experts. &nbsp;&nbsp;&nbsp;Planning Society Redevelopment in Nashik? Partner with
-					Structured & Transparent Experts. &nbsp;&nbsp;&nbsp;Planning Society Redevelopment in Nashik?
-					Partner with Structured & Transparent Experts.</div>
+				<div class="content">Planning Society Redevelopment in Nashik? Partner with Structured &amp; Transparent
+					Experts. &nbsp;&nbsp; Planning Society Redevelopment in Nashik? Partner with Structured &amp;
+					Transparent Experts. &nbsp;&nbsp; Planning Society Redevelopment in Nashik? Partner with Structured
+					&amp; Transparent Experts. &nbsp;&nbsp; Planning Society Redevelopment in Nashik? Partner with
+					Structured &amp; Transparent Experts.</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="views_development">
+	<section class="views_development" aria-label="Featured projects">
 		<div class="content">
-			<img src="./images/home/bg_rajyog.jpg" width="100%" class="wow zoomIn slow animated" loading="lazy">
-			<div class="desc wow fadeInUp slow animated">
-				<h4>RAJYOG</h4>
-				<!-- <a href="./projects/nirvaan-residencies">VIEW</a> -->
+			<img src="./images/home/bg_rajyog.jpg" width="100%" alt="Rajyog residential project" loading="lazy">
+			<div class="desc">
+				<h4>Rajyog</h4>
 			</div>
 		</div>
 		<div class="content">
-			<img src="./images/home/bg_yashodhra_girls_hostel.jpg" width="100%" class="wow zoomIn slow animated"
+			<img src="./images/home/bg_yashodhra_girls_hostel.jpg" width="100%" alt="Yashodhara Girls Hostel project"
 				loading="lazy">
-			<div class="desc wow fadeInUp slow animated">
-				<h4>YASHODHARA GIRLS HOSTEL</h4>
-				<!-- <a href="./projects/quillion-residencies">VIEW</a> -->
+			<div class="desc">
+				<h4>Yashodhara Girls Hostel</h4>
 			</div>
 		</div>
 		<div class="content">
-			<img src="./images/home/sudhan_tower.jpg" width="100%" class="wow zoomIn slow animated" loading="lazy">
-			<div class="desc wow fadeInUp slow animated">
-				<h4>SUDHAN TOWER</h4>
-				<!-- <a href="./projects/emporio-one">VIEW</a> -->
+			<img src="./images/home/sudhan_tower.jpg" width="100%" alt="Sudhan Tower project" loading="lazy">
+			<div class="desc">
+				<h4>Sudhan Tower</h4>
 			</div>
 		</div>
 		<div class="content">
-			<img src="./images/home/mr_nikam.jpg" width="100%" class="wow zoomIn slow animated" loading="lazy">
-			<div class="desc wow fadeInUp slow animated">
-				<h4>MR. NIKAM</h4>
-				<!-- <a href="./projects/the-exchange">VIEW</a> -->
+			<img src="./images/home/mr_nikam.jpg" width="100%" alt="Mr. Nikam residence" loading="lazy">
+			<div class="desc">
+				<h4>Mr. Nikam</h4>
 			</div>
 		</div>
 	</section>
 
-	<section class="what_we_specialise">
+	<section class="what_we_specialise" aria-label="Our specialisations">
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<div class="fw title wow fadeInUp slow animated">
-						<h2>WHAT WE <br><strong>SPECIALISE IN</strong></h2>
-						<span>&nbsp;</span>
+					<div class="fw title" data-reveal>
+						<h2>What We <strong>Specialise In</strong></h2>
 					</div>
 					<div class="fw mainimgdesc">
 						<div class="fw inside">
-							<div class="wow fadeInUp slow animated linebetween linebetweenbig2">&nbsp;</div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
+							<div class="fw imgdesc" data-reveal data-delay="1">
 								<img src="./images/home/specialise/Layout_Creation.png"
 									alt="Society Redevelopment Projects">
 								<div class="desc">
@@ -151,8 +155,7 @@
 										comprehensive planning and execution strategies.</p>
 								</div>
 							</div>
-							<div class="wow fadeInUp slow animated linebetween"><span>&nbsp;</span></div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
+							<div class="fw imgdesc" data-reveal data-delay="2">
 								<img src="./images/home/specialise/Construction.png" alt="Joint Venture Developments">
 								<div class="desc">
 									<h5>Joint Venture Developments</h5>
@@ -160,54 +163,44 @@
 										growth and shared value creation.</p>
 								</div>
 							</div>
-							<div class="wow fadeInUp slow animated linebetween"><span>&nbsp;</span></div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
+							<div class="fw imgdesc" data-reveal data-delay="3">
 								<img src="./images/home/specialise/Decor.png"
-									alt="Residential Project Planning & Execution">
+									alt="Residential Project Planning &amp; Execution">
 								<div class="desc">
-									<h5>Residential Project Planning & Execution</h5>
+									<h5>Residential Project Planning &amp; Execution</h5>
 									<p>Comprehensive planning and seamless execution of residential projects from
 										conception to completion.</p>
 								</div>
 							</div>
-							<div class="wow fadeInUp slow animated linebetween linebetweenbig linebetweenbig3">
-								<span>&nbsp;</span>
-							</div>
 						</div>
 						<div class="fw inside">
-							<div class="wow fadeInUp slow animated linebetween linebetweenbig2"><span>&nbsp;</span>
-							</div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
+							<div class="fw imgdesc" data-reveal data-delay="1">
 								<img src="./images/home/specialise/Litigation.png"
-									alt="Technical Feasibility & FSI Optimization">
+									alt="Technical Feasibility &amp; FSI Optimization">
 								<div class="desc">
-									<h5>Technical Feasibility & FSI Optimization</h5>
+									<h5>Technical Feasibility &amp; FSI Optimization</h5>
 									<p>Advanced technical analysis and optimization of Floor Space Index to maximize
 										project potential and profitability.</p>
 								</div>
 							</div>
-							<div class="wow fadeInUp slow animated linebetween"><span>&nbsp;</span></div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
+							<div class="fw imgdesc" data-reveal data-delay="2">
 								<img src="./images/home/specialise/Compensations.png"
-									alt="Legal Due Diligence & Documentation Structuring">
+									alt="Legal Due Diligence &amp; Documentation Structuring">
 								<div class="desc">
-									<h5>Legal Due Diligence & Documentation Structuring</h5>
+									<h5>Legal Due Diligence &amp; Documentation Structuring</h5>
 									<p>Thorough legal investigations and meticulous documentation structuring for
-										transparent and secure transactions.
-									</p>
+										transparent and secure transactions.</p>
 								</div>
 							</div>
-							<div class="wow fadeInUp slow animated linebetween"><span>&nbsp;</span></div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
+							<div class="fw imgdesc" data-reveal data-delay="3">
 								<img src="./images/home/specialise/Government-_Clearances.png"
-									alt="Financial Planning & Cash Flow Management">
+									alt="Financial Planning &amp; Cash Flow Management">
 								<div class="desc">
-									<h5>Financial Planning & Cash Flow Management</h5>
+									<h5>Financial Planning &amp; Cash Flow Management</h5>
 									<p>Strategic financial planning and efficient cash flow management to ensure project
 										sustainability and investor returns.</p>
 								</div>
 							</div>
-							<div class="wow fadeInUp slow animated linebetween linebetweenbig"><span>&nbsp;</span></div>
 						</div>
 					</div>
 				</div>
@@ -215,20 +208,20 @@
 		</div>
 	</section>
 
-	<section class="fw ourFounder">
+	<section class="fw ourFounder" aria-label="Our founders">
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<div class="fw title wow fadeInLeftBig slow animated">
-						<h2>OUR <br><strong>FOUNDERS</strong></h2>
+					<div class="fw title" data-reveal>
+						<h2>Our <strong>Founders</strong></h2>
 					</div>
 					<div class="fw founderdesc">
 						<img src="images/about/founder/Abhishekh-Tarkase.png" width="100%"
-							alt="ABHISHEKH BABASAHEB TARKASE" loading="lazy" class="wow fadeInLeftBig slow animated">
-						<div class="fw desc wow fadeInRightBig slow animated">
-							<p><small>FOUNDER</small></p>
+							alt="Mr. Abhishekh Babasaheb Tarkase — Co-founder" loading="lazy" data-reveal="left">
+						<div class="fw desc" data-reveal="right">
+							<p><small>Co-Founder &amp; Director</small></p>
 							<p><strong>Mr. Abhishekh Babasaheb Tarkase</strong></p>
-							<div class="fw linedot">&nbsp;</div>
+							<div class="fw linedot"></div>
 							<p>As the Co-founder and Director of AbhiRaj Infra Realty, Mr. Abhishekh Babasaheb Tarkase
 								brings a dedicated, hands-on leadership style to the real estate market. Recognizing
 								that a home is more than just an asset, he has worked tirelessly to build a company
@@ -236,71 +229,196 @@
 						</div>
 					</div>
 					<div class="fw founderdesc right">
-						<div class="fw desc wow fadeInLeftBig slow animated">
-							<p><small>FOUNDER</small></p>
+						<div class="fw desc" data-reveal="left">
+							<p><small>Co-Founder &amp; Director</small></p>
 							<p><strong>Mr. Viraj Anil Daspute</strong></p>
-							<div class="fw linedot">&nbsp;</div>
+							<div class="fw linedot"></div>
 							<p>Mr. Viraj Anil Daspute, Director and Co-founder of AbhiRaj Infra Realty, is the strategic
 								heart of the firm's success. Since its founding, he has remained committed to setting
 								new benchmarks in the real estate sector. By prioritizing professional excellence and
 								sustainable growth, Mr. Viraj is leading AbhiRaj Infra Realty toward a future where
 								quality living and smart investments are accessible to all.</p>
 						</div>
-						<img src="images/about/founder/Viraj-Daspute.png" width="100%" alt="VIRAJ ANIL DASPUTE"
-							loading="lazy" class="wow fadeInRightBig slow animated">
+						<img src="images/about/founder/Viraj-Daspute.png" width="100%"
+							alt="Mr. Viraj Anil Daspute — Co-founder" loading="lazy" data-reveal="right">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="fw peoplesay">
+	<!-- ── YOUR LAND, OUR PARTNERSHIP ────────────────────────── -->
+	<section class="fw partner-section" id="partner-with-us" aria-label="Partnership opportunities">
+
+		<!-- Decorative oversized label -->
+		<div class="partner-section__watermark" aria-hidden="true">DEVELOP</div>
+
 		<div class="container">
-			<div class="row">
-				<div class="col pr">
-					<div class="fw title wow fadeInUp slow animated delay-02s">
-						<h2>WHAT <br><strong>PEOPLE SAY</strong></h2>
+
+			<!-- Header block -->
+			<div class="partner-section__header" data-reveal>
+				<div class="partner-section__eyebrow">
+					<span class="partner-eyebrow-line"></span>
+					<span>Partner With Us · Nashik &amp; Beyond</span>
+				</div>
+				<h2 class="partner-section__headline">
+					You Own the Land.<br><em>We Build the Future.</em>
+				</h2>
+				<p class="partner-section__subtext">Whether you hold a plot, an old society, or an open field — we turn
+					it into a thriving residential or commercial development with zero hassle for you.</p>
+			</div>
+
+			<!-- FSI Potential Strip -->
+			<div class="partner-fsi-strip" data-reveal>
+				<div class="partner-fsi-strip__label">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+						aria-hidden="true">
+						<rect x="2" y="3" width="20" height="14" rx="1" />
+						<path d="M8 21h8M12 17v4" />
+						<path d="M7 9h2M7 12h4" />
+					</svg>
+					<span>Approximate Development Potential (Nashik FSI 1.5–2.5)</span>
+				</div>
+				<div class="partner-fsi-strip__grid">
+					<div class="partner-fsi-item">
+						<span class="partner-fsi-item__plot">1,000<small>sq.ft plot</small></span>
+						<svg class="partner-fsi-arrow" viewBox="0 0 32 10" fill="none" aria-hidden="true">
+							<path d="M0 5h28M24 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+								stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span class="partner-fsi-item__built">1,500 – 2,500<small>sq.ft buildable</small></span>
 					</div>
-					<div class="HomepeoplesaySlide owl-carousel owl-theme arrowsbtn">
-						<!-- <div class="content">
-						<img src="./images/home/people-say/01.jpg" class="img hide-xs wow fadeInDown slow animated delay-02s" alt="Amazing Place !">
-						<img src="./images/home/people-say/01_mo.jpg" class="img show-xs wow fadeInDown slow animated delay-02s" alt="Amazing Place !">
-						<div class="desc fw wow fadeInUp slow animated delay-04s">
-							<img src="./images/home/people-say/base2.png" class="basecontent hide-xs" alt="basecontent">
-							<img src="./images/home/people-say/base3.png" class="basecontent_mo show-xs" alt="basecontent">
-							<div class="description">
-								<img src="./images/home/people-say/quotes.png" class="quotes" alt="quotes">
-								<p>Amazing Place !<br/><br/></p>
-								<p>Great environment, professional and nice people, clean and beautiful office set up. They care about their clients and train their agents frequently so they are always updated with what’s going on in the market. I recommend VE to anyone looking to do any Real Estate transaction.</p>
-								<p><br/>Jane Doe</p>
-							</div>
-						</div>
-					</div> -->
-						<div class="content">
-							<img src="./images/home/people-say/02.jpg"
-								class="img hide-xs wow fadeInDown slow animated delay-02s" alt="Amazing Place !">
-							<img src="./images/home/people-say/02_mo.jpg"
-								class="img show-xs wow fadeInDown slow animated delay-02s" alt="Amazing Place !">
-							<div class="desc fw wow fadeInUp slow animated delay-04s">
-								<img src="./images/home/people-say/base2.png" class="basecontent hide-xs"
-									alt="basecontent">
-								<img src="./images/home/people-say/base3.png" class="basecontent_mo show-xs"
-									alt="basecontent">
-								<div class="description">
-									<img src="./images/home/people-say/quotes.png" class="quotes" alt="quotes">
-									<!-- <p>&nbsp;<br/><br/></p> -->
-									<p><br /><br />I, Mr. Nikam, truly appreciate the thoughtful design and premium
-										quality of my residence developed by Abhiraj Infra Realty. The home is perfectly
-										planned with a modern elevation, excellent space utilization, and a peaceful
-										residential environment. Its strategic location and elegant architecture make
-										everyday living comfortable and convenient.</p>
-									<p><br />Mr. Nikam</p>
-								</div>
-							</div>
-						</div>
+					<div class="partner-fsi-item">
+						<span class="partner-fsi-item__plot">2,500<small>sq.ft plot</small></span>
+						<svg class="partner-fsi-arrow" viewBox="0 0 32 10" fill="none" aria-hidden="true">
+							<path d="M0 5h28M24 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+								stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span class="partner-fsi-item__built">3,750 – 6,250<small>sq.ft buildable</small></span>
+					</div>
+					<div class="partner-fsi-item">
+						<span class="partner-fsi-item__plot">5,000<small>sq.ft plot</small></span>
+						<svg class="partner-fsi-arrow" viewBox="0 0 32 10" fill="none" aria-hidden="true">
+							<path d="M0 5h28M24 1l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+								stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span class="partner-fsi-item__built">7,500 – 12,500<small>sq.ft buildable</small></span>
 					</div>
 				</div>
+				<p class="partner-fsi-strip__note">* FSI varies by zone. We assess your plot and give you an exact
+					feasibility report — free of charge.</p>
 			</div>
+
+			<!-- Partnership Models Grid -->
+			<div class="partner-models" data-reveal>
+
+				<div class="partner-card partner-card--residential">
+					<div class="partner-card__index">01</div>
+					<div class="partner-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6 42V22L24 8L42 22V42H30V30H18V42H6Z" stroke="currentColor" stroke-width="1.5"
+								stroke-linejoin="round" />
+							<path d="M18 30h12" stroke="currentColor" stroke-width="1.5" />
+						</svg>
+					</div>
+					<h4 class="partner-card__title">Residential Joint Venture</h4>
+					<p class="partner-card__desc">You provide the land — we handle design, construction, approvals, and
+						sales. Profits are shared as agreed. No risk, no investment required from your side.</p>
+					<ul class="partner-card__tags">
+						<li>Row Houses</li>
+						<li>Apartment Buildings</li>
+						<li>Bungalows</li>
+					</ul>
+					<div class="partner-card__cta-line">Ideal for plots 1,000 sq.ft and above</div>
+				</div>
+
+				<div class="partner-card partner-card--society">
+					<div class="partner-card__index">02</div>
+					<div class="partner-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="6" y="18" width="36" height="24" rx="1" stroke="currentColor" stroke-width="1.5" />
+							<path d="M6 18L24 6L42 18" stroke="currentColor" stroke-width="1.5"
+								stroke-linejoin="round" />
+							<rect x="16" y="28" width="8" height="14" stroke="currentColor" stroke-width="1.5" />
+							<rect x="28" y="28" width="6" height="8" stroke="currentColor" stroke-width="1.5" />
+						</svg>
+					</div>
+					<h4 class="partner-card__title">Society Redevelopment</h4>
+					<p class="partner-card__desc">Old building? Unlock its true value. We redevelop your society with
+						more floors, modern amenities, and larger flats — while members get free upgraded homes.</p>
+					<ul class="partner-card__tags">
+						<li>Free New Homes</li>
+						<li>More FSI Utilised</li>
+						<li>RERA Compliant</li>
+					</ul>
+					<div class="partner-card__cta-line">Societies with 4+ members, Nashik region</div>
+				</div>
+
+				<div class="partner-card partner-card--commercial">
+					<div class="partner-card__index">03</div>
+					<div class="partner-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="4" y="8" width="40" height="34" rx="1" stroke="currentColor" stroke-width="1.5" />
+							<path d="M4 18h40M14 8v10M24 8v10M34 8v10" stroke="currentColor" stroke-width="1.5" />
+							<rect x="14" y="26" width="8" height="8" stroke="currentColor" stroke-width="1.5" />
+							<rect x="26" y="26" width="8" height="8" stroke="currentColor" stroke-width="1.5" />
+						</svg>
+					</div>
+					<h4 class="partner-card__title">Commercial Development</h4>
+					<p class="partner-card__desc">High-footfall locations around Nashik? We develop shops, office
+						spaces, and mixed-use complexes that generate long-term rental income or immediate sale value.
+					</p>
+					<ul class="partner-card__tags">
+						<li>Shops &amp; Showrooms</li>
+						<li>Office Complexes</li>
+						<li>Mixed-Use Buildings</li>
+					</ul>
+					<div class="partner-card__cta-line">Main roads, commercial zones preferred</div>
+				</div>
+
+				<div class="partner-card partner-card--plotonly">
+					<div class="partner-card__index">04</div>
+					<div class="partner-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="6" y="6" width="36" height="36" rx="1" stroke="currentColor" stroke-width="1.5"
+								stroke-dasharray="4 3" />
+							<path d="M6 26h16v16H6z" stroke="currentColor" stroke-width="1.5" />
+							<path d="M22 6h20v20H22z" stroke="currentColor" stroke-width="1.5" />
+							<path d="M28 14h8M32 10v8" stroke="currentColor" stroke-width="1.5"
+								stroke-linecap="round" />
+						</svg>
+					</div>
+					<h4 class="partner-card__title">Land-Only Partnership</h4>
+					<p class="partner-card__desc">Not ready to develop yet? We acquire land at fair market value or
+						enter into a long-term development agreement — your asset, your terms, our commitment.</p>
+					<ul class="partner-card__tags">
+						<li>Flat Purchase</li>
+						<li>Revenue Share</li>
+						<li>Flexible Terms</li>
+					</ul>
+					<div class="partner-card__cta-line">Any zone, any size — let's talk</div>
+				</div>
+
+			</div>
+
+			<!-- Bottom CTA banner -->
+			<div class="partner-cta-band" data-reveal>
+				<div class="partner-cta-band__content">
+					<span class="partner-cta-band__label">Ready to unlock your land's potential?</span>
+					<h3 class="partner-cta-band__headline">We operate across Nashik, Panchvati, Satpur, Cidco, Gangapur
+						Road &amp; surroundings.</h3>
+				</div>
+				<div class="partner-cta-band__action">
+					<a class="getintouch_popup_link partner-cta-btn" rel="getintouchpopup" href="javascript:void(0)">
+						<span>Start a Conversation</span>
+						<svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+							<path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5"
+								stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</a>
+				</div>
+			</div>
+
 		</div>
 	</section>
 
@@ -747,57 +865,102 @@
 		</div>
 	</section>
 	<script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
-	<!-- <script type="text/javascript" src="./js/jquery.lbt-lightbox.min.js"></script> -->
-
 	<script type="text/javascript" src="./js/jquery.selectBox.js"></script>
 	<script type="text/javascript" src="./js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="./js/OwlCarousel2Thumbs.js"></script>
 	<script type="text/javascript" src="./js/wow.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.validate.min.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-	<!-- <script type="text/javascript" src="./js/jquery.waypoints.min.js"></script> -->
-	<!-- <script type="text/javascript" src="./js/jquery.counterup.min.js"></script> -->
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script type="text/javascript" src="./js/main.js"></script>
 
-	<script type="text/javascript">
-		$(window).scroll(startCounter);
-
-
-		function startCounter() {
-			var counterEl = document.querySelector('#counter');
-			if (!counterEl) return; // records section removed – nothing to do
-			let scrollY = (window.pageYOffset || document.documentElement.scrollTop) + window.innerHeight;
-			let divPos = counterEl.offsetTop;
-
-			if (scrollY > divPos) {
-				$(window).off("scroll", startCounter);
-
-				$('.counter').each(function () {
-					var $this = $(this);
-					jQuery({
-						Counter: 0
-					}).animate({
-						Counter: $this.text().replace(/,/g, '')
-					}, {
-						duration: 5000,
-						easing: 'swing',
-						step: function () {
-							$this.text(commaSeparateNumber(Math.floor(this.Counter)));
-						},
-						complete: function () {
-							$this.text(commaSeparateNumber(this.Counter));
-							//alert('finished');
-						}
-					});
-				});
-
-				function commaSeparateNumber(num) {
-					return num.toString().replace(/(?!^)(?=(?:\d{2})*\d{3}(?:\.|$))/g, ',');
+	<!-- Scroll-based header transparency + progress + Intersection Observer reveals -->
+	<script>
+		(function () {
+			// 1. Header: transparent → .scrolled + progress bar + height shrink
+			var header = document.querySelector('.header');
+			var prog = document.querySelector('.header-progress');
+			function onScroll() {
+				var s = window.scrollY;
+				// scrolled class
+				if (s > 60) {
+					header.classList.add('scrolled');
+				} else {
+					header.classList.remove('scrolled');
+				}
+				// scroll progress bar
+				if (prog) {
+					var max = document.body.scrollHeight - window.innerHeight;
+					var pct = max > 0 ? (s / max) * 100 : 0;
+					prog.style.width = pct + '%';
 				}
 			}
-		}
+			window.addEventListener('scroll', onScroll, { passive: true });
+			onScroll();
+
+			// 2. Intersection Observer for data-reveal elements
+			var revealEls = document.querySelectorAll('[data-reveal]');
+			if ('IntersectionObserver' in window && revealEls.length) {
+				var io = new IntersectionObserver(function (entries) {
+					entries.forEach(function (entry) {
+						if (entry.isIntersecting) {
+							var el = entry.target;
+							var delay = el.getAttribute('data-delay');
+							if (delay) {
+								el.style.transitionDelay = (parseInt(delay, 10) * 120) + 'ms';
+							}
+							el.classList.add('visible');
+							io.unobserve(el);
+						}
+					});
+				}, { threshold: 0.12 });
+				revealEls.forEach(function (el) { io.observe(el); });
+			} else {
+				// Fallback: show all immediately
+				revealEls.forEach(function (el) { el.classList.add('visible'); });
+			}
+		})();
+	</script>
+
+	<script type="text/javascript">
+		// Count-up animation for Impact In Numbers section
+		(function () {
+			var statEls = document.querySelectorAll('.impact-stat__num');
+			if (!statEls.length) return;
+
+			function animateCount(el) {
+				var target = parseInt(el.getAttribute('data-target'), 10);
+				var suffix = el.getAttribute('data-suffix') || '';
+				var duration = 1800;
+				var startTime = null;
+
+				function step(timestamp) {
+					if (!startTime) startTime = timestamp;
+					var progress = Math.min((timestamp - startTime) / duration, 1);
+					// Ease-out cubic
+					var eased = 1 - Math.pow(1 - progress, 3);
+					var current = Math.round(eased * target);
+					el.textContent = current + (progress >= 1 ? suffix : '');
+					if (progress < 1) requestAnimationFrame(step);
+				}
+				requestAnimationFrame(step);
+			}
+
+			if ('IntersectionObserver' in window) {
+				var io = new IntersectionObserver(function (entries) {
+					entries.forEach(function (entry) {
+						if (entry.isIntersecting) {
+							animateCount(entry.target);
+							io.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.4 });
+				statEls.forEach(function (el) { io.observe(el); });
+			} else {
+				statEls.forEach(function (el) {
+					el.textContent = el.getAttribute('data-target') + (el.getAttribute('data-suffix') || '');
+				});
+			}
+		})();
 	</script>
 
 </body>
