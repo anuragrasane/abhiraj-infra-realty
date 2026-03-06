@@ -100,6 +100,7 @@ header {
 
 /* Brand group: logo + eyebrow */
 .header-brand {
+  --space-6: 10px;
   display: flex;
   align-items: center;
   gap: var(--space-6);
@@ -114,6 +115,7 @@ header .logo {
 header .logo img {
   height: 104px;
   width: auto;
+  filter: brightness(0) invert(1);
   transition: height var(--dur-base) var(--ease-out),
     opacity var(--dur-base) var(--ease-out);
   opacity: 0.92;
@@ -883,7 +885,8 @@ footer .copyright p a:hover {
 
   /* Header */
   .header {
-    height: 120px;
+    height: 88px;
+    overflow: hidden;
   }
 
   header {
@@ -892,7 +895,7 @@ footer .copyright p a:hover {
   }
 
   header .logo img {
-    height: 104px;
+    height: 72px;
   }
 
   /* Mobile hamburger — 3 spans */
@@ -940,9 +943,9 @@ footer .copyright p a:hover {
     font-size: var(--text-base);
   }
 
-  /* Mobile getintouch */
+  /* Mobile getintouch — no extra margin needed (no hamburger) */
   .getintouch {
-    margin-right: 48px;
+    margin-right: 0;
   }
 
   .getintouch a,
