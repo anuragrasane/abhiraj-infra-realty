@@ -25,37 +25,38 @@
 
 	<!-- Site styles -->
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/home.css">
 	<link rel="stylesheet" type="text/css" href="./css/about.css">
 </head>
 
-<body class="sticky_header_with">
+<body>
 
-	<div class="header fw">
+	<div class="header fw" role="banner">
+		<div class="header-progress" aria-hidden="true"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<header>
-						<a href="./" class="logo"><img src="./images/logo.png" alt="logo"></a>
+					<header aria-label="Site header">
+						<div class="header-brand">
+							<a href="./" class="logo" aria-label="Abhiraj Infra Realty home">
+								<img src="./images/logo.png" alt="Abhiraj Infra Realty logo">
+							</a>
+							<span class="header-eyebrow">Nashik &middot; Est. 2018</span>
+						</div>
 						<div class="getintouch show-xs">
-							<a class="getintouch_popup_link" rel="getintouchpopup" href="javascript:void(0);"><span>GET
-									IN TOUCH</span></a>
+							<a class="getintouch_popup_link header-cta" rel="getintouchpopup"
+								href="javascript:void(0);"><span>GET IN TOUCH</span></a>
 						</div>
-						<div class="humberger">
-							<span>&nbsp;</span>
-							<span>&nbsp;</span>
-							<span>&nbsp;</span>
-							<span>&nbsp;</span>
-						</div>
-						<nav>
+						<!-- <div class="humberger" aria-label="Toggle navigation" role="button" tabindex="0">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div> -->
+						<nav aria-label="Primary navigation">
 							<ul>
-								<li>
-									<a class='navlink active' href="./about.html">ABOUT<span>&nbsp;</span></a>
-								</li>
-								<li>
-									<a class='navlink' href="./contact-us.html">CONTACT<span>&nbsp;</span></a>
-								</li>
+								<!-- Nav links can be added here in future -->
 								<li class="getintouch hide-xs">
-									<a class="getintouch_popup_link" rel="getintouchpopup"
+									<a class="getintouch_popup_link header-cta" rel="getintouchpopup"
 										href="javascript:void(0)"><span>GET IN TOUCH</span></a>
 								</li>
 							</ul>
@@ -65,7 +66,7 @@
 			</div>
 		</div>
 	</div>
-	<section class="fw main2Banner">
+	<section class="fw main2Banner" aria-label="About hero banner">
 		<div class="fw AboutSlider">
 			<div class="banner" id="banner_01">&nbsp;</div>
 		</div>
@@ -73,7 +74,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col pr">
-						<div class="description wow fadeInLeftBig slow animated delay-1s">
+						<div class="description" data-reveal="left">
 							<h1>ABOUT US</h1>
 						</div>
 					</div>
@@ -82,33 +83,22 @@
 		</div>
 	</section>
 
-	<section class="fw ourStory" id="our-story-div">
+	<section class="fw ourStory" id="our-story-div" aria-label="About Us">
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="fw box">
-						<div class="boxborder wow fadeIn slow animated delay-2s">&nbsp;</div>
-						<div class="fw title wow fadeInUp slow animated delay-0.5s">
-							<h2>OUR <br><strong>STORY</strong></h2>
+						<div class="boxborder" data-reveal>&nbsp;</div>
+						<div class="fw title" data-reveal>
+							<h2>ABOUT <br><strong>US</strong></h2>
 						</div>
 						<div class="fw descmain">
-							<div class="titledesc wow fadeInUp slow animated delay-1s">
-								<h3>Built on the foundation of discipline, transparency, and structured execution.</h3>
-							</div>
-							<div class="desc fw wow fadeInUp slow animated delay-1.5s">
-								<p>Abhiraj Infra Realty is a professionally structured real estate development firm
-									specializing in society redevelopment and joint venture projects across Maharashtra.
-									Established with a focused and disciplined approach, the firm operates on the
-									principles of legal clarity, financial prudence, and transparent communication.</p>
-								<p>Led by partners Abhishek Tarkase and Viraj Daspute, the company integrates technical
-									coordination, regulatory compliance, and structured financial planning into every
-									project undertaken.</p>
-								<p>At Abhiraj Infra Realty, we believe redevelopment is not merely reconstruction — it
-									is the responsible transformation of existing communities into stronger, safer, and
-									future-ready living environments.</p>
-								<p>With approximately 1,75,000 sq. ft. delivered / near delivery and 72,000 sq. ft.
-									under pipeline, the firm continues to grow with a commitment to structured growth
-									and responsible urban development.</p>
+							<div class="desc fw" data-reveal data-delay="1" style="width: 100%; padding: 40px 60px 0; column-count: 2; column-gap: 80px;">
+								<p><strong>About Abhiraj Infra Realty</strong></p>
+								<p>Abhiraj Infra Realty is a professionally structured real estate development firm engaged in residential and commercial developments, society redevelopment projects, and joint venture developments.</p>
+								<p>The firm is built on the principles of disciplined financial planning, transparent communication, and responsible development practices. With a systematic approach toward project planning and execution, Abhiraj Infra Realty focuses on creating developments that are well-planned, structurally sound, and aligned with long-term urban growth.</p>
+								<p style="break-inside: avoid-column;">Every project undertaken by the firm is evaluated through a careful process of technical feasibility, financial viability, and regulatory compliance, ensuring that developments are planned and executed in a professional and organized manner.</p>
+								<p style="break-inside: avoid-column;">The firm aims to contribute to the development of modern residential and commercial spaces that enhance the quality of urban living while creating long-term value for landowners, society members, businesses, and homebuyers.</p>
 							</div>
 						</div>
 					</div>
@@ -117,214 +107,140 @@
 		</div>
 	</section>
 
-	<section class="fw ourFounder">
+
+	<section class="fw partner-section" aria-label="Core Areas of Expertise">
+		<div class="partner-section__watermark" aria-hidden="true">EXPERTISE</div>
 		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="fw title wow fadeInLeftBig slow animated">
-						<h2>OUR <br><strong>FOUNDERS</strong></h2>
+			<div class="partner-section__header" data-reveal>
+				<h2 class="partner-section__headline">
+					Core Areas of<br><em>Expertise</em>
+				</h2>
+			</div>
+
+			<div class="partner-models" data-reveal>
+				<div class="partner-card partner-card--residential">
+					<div class="partner-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6 42V22L24 8L42 22V42H30V30H18V42H6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+							<path d="M18 30h12" stroke="currentColor" stroke-width="1.5" />
+						</svg>
 					</div>
-					<div class="fw founderdesc">
-						<img src="images/about/founder/Abhishekh-Tarkase.png" width="100%"
-							alt="ABHISHEKH BABASAHEB TARKASE" loading="lazy" class="wow fadeInLeftBig slow animated">
-						<div class="fw desc wow fadeInRightBig slow animated">
-							<p><small>FOUNDER</small></p>
-							<p><strong>Mr. Abhishekh Babasaheb Tarkase</strong></p>
-							<div class="fw linedot">&nbsp;</div>
-							<p>As the Co-founder and Director of AbhiRaj Infra Realty, Mr. Abhishekh Babasaheb Tarkase
-								brings a dedicated, hands-on leadership style to the real estate market. Recognizing
-								that a home is more than just an asset, he has worked tirelessly to build a company
-								rooted in reliability and integrity.</p>
-						</div>
+					<h4 class="partner-card__title">Residential Developments</h4>
+				</div>
+				<div class="partner-card partner-card--commercial">
+					<div class="partner-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="4" y="8" width="40" height="34" rx="1" stroke="currentColor" stroke-width="1.5" />
+							<path d="M4 18h40M14 8v10M24 8v10M34 8v10" stroke="currentColor" stroke-width="1.5" />
+							<rect x="14" y="26" width="8" height="8" stroke="currentColor" stroke-width="1.5" />
+							<rect x="26" y="26" width="8" height="8" stroke="currentColor" stroke-width="1.5" />
+						</svg>
 					</div>
-					<div class="fw founderdesc right">
-						<div class="fw desc wow fadeInLeftBig slow animated">
-							<p><small>FOUNDER</small></p>
-							<p><strong>Mr. Viraj Anil Daspute</strong></p>
-							<div class="fw linedot">&nbsp;</div>
-							<p>Mr. Viraj Anil Daspute, Director and Co-founder of AbhiRaj Infra Realty, is the strategic
-								heart of the firm’s success. Since its founding, he has remained committed to setting
-								new benchmarks in the real estate sector. By prioritizing professional excellence and
-								sustainable growth, Mr. Viraj is leading AbhiRaj Infra Realty toward a future where
-								quality living and smart investments are accessible to all.</p>
-						</div>
-						<img src="images/about/founder/Viraj-Daspute.png" width="100%" alt="VIRAJ ANIL DASPUTE"
-							loading="lazy" class="wow fadeInRightBig slow animated">
+					<h4 class="partner-card__title">Commercial Developments</h4>
+				</div>
+				<div class="partner-card partner-card--society">
+					<div class="partner-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="6" y="18" width="36" height="24" rx="1" stroke="currentColor" stroke-width="1.5" />
+							<path d="M6 18L24 6L42 18" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+							<rect x="16" y="28" width="8" height="14" stroke="currentColor" stroke-width="1.5" />
+							<rect x="28" y="28" width="6" height="8" stroke="currentColor" stroke-width="1.5" />
+						</svg>
 					</div>
+					<h4 class="partner-card__title">Society Redevelopment Projects</h4>
+				</div>
+				<div class="partner-card partner-card--plotonly">
+					<div class="partner-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="6" y="6" width="36" height="36" rx="1" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3" />
+							<path d="M6 26h16v16H6z" stroke="currentColor" stroke-width="1.5" />
+							<path d="M22 6h20v20H22z" stroke="currentColor" stroke-width="1.5" />
+							<path d="M28 14h8M32 10v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h4 class="partner-card__title">Joint Venture Developments</h4>
+				</div>
+				<div class="partner-card">
+					<div class="partner-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="2" y="3" width="20" height="14" rx="1" stroke="currentColor" stroke-width="1.5"/>
+							<path d="M8 21h8M12 17v4M8 9h2M8 12h4" stroke="currentColor" stroke-width="1.5"/>
+							<path d="M30 38h12M36 32v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h4 class="partner-card__title">Project Feasibility &amp; Financial Structuring</h4>
+				</div>
+				<div class="partner-card">
+					<div class="partner-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8 12h32M8 20h32M8 28h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M30 32l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<h4 class="partner-card__title">Regulatory &amp; Documentation Coordination</h4>
+				</div>
+			</div>
+
+			<div class="partner-cta-band" data-reveal style="margin-top: 30px;">
+				<div class="partner-cta-band__content">
+					<h3 class="partner-cta-band__headline"><strong>Development Planning &amp; Execution</strong></h3>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="what_we_specialise">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="fw title wow fadeInUp slow animated">
-						<h2>OUR <br><strong>VALUES</strong></h2>
-						<span>&nbsp;</span>
-					</div>
-					<div class="fw mainimgdesc">
-						<div class="fw inside">
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Integrity</h5>
-									<p>Transparency and ethical structuring form the foundation of every redevelopment
-										proposal and agreement we undertake.</p>
-								</div>
-							</div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Discipline</h5>
-									<p>Strong financial planning and controlled execution ensure stability and
-										reliability at every stage of development.</p>
-								</div>
-							</div>
-						</div>
-						<div class="fw inside">
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Responsibility</h5>
-									<p>We prioritize the protection of existing society members' interests through clear
-										documentation and structured communication.</p>
-								</div>
-							</div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Quality</h5>
-									<p>From structural safety to finishing standards, quality supervision remains
-										central to every project.</p>
-								</div>
-							</div>
-						</div>
-						<div class="fw inside">
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Commitment</h5>
-									<p>We adhere to documented timelines and phased execution to ensure dependable
-										delivery.</p>
-								</div>
-							</div>
-						</div>
-					</div>
+	<section class="fw partner-section" aria-label="Our Development Approach" style="padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+		<div class="partner-section__watermark" aria-hidden="true" style="font-size: 12rem;">APPROACH</div>
+		<div class="container" style="position: relative; z-index: 2;">
+			<div data-reveal>
+				<div class="partner-section__eyebrow" style="justify-content: center; margin-bottom: 30px;">
+					<span class="partner-eyebrow-line"></span>
+					<span>Structured Execution</span>
+					<span class="partner-eyebrow-line" style="margin-left: 10px;"></span>
+				</div>
+				<h2 style="font-family: var(--font-display); font-size: 3rem; color: var(--parchment); line-height: 1.2; margin-bottom: 30px;">
+					Our Development<br><em>Approach.</em>
+				</h2>
+				<div style="max-width: 800px; margin: 0 auto; font-size: 1.125rem; line-height: 1.8;">
+					<p style="margin-bottom: 20px; color: var(--gold);">At Abhiraj Infra Realty, every project is approached through a structured development process that integrates financial planning, technical expertise, and regulatory coordination.</p>
+					<p style="color: var(--gold);">This method enables the firm to deliver developments that are professionally planned, efficiently executed, and aligned with long-term value creation for stakeholders.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="our_development_philosophy">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="fw title wow fadeInUp slow animated">
-						<h2>OUR<br><strong>DEVELOPMENT PHILOSOPHY</strong></h2>
-						<span>&nbsp;</span>
-					</div>
-					<div class="fw mainimgdesc">
-						<div class="fw inside">
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Detailed Technical & FSI Feasibility Study</h5>
-								</div>
-							</div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Transparent Offer Structuring</h5>
-								</div>
-							</div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Legal Due Diligence & Agreement Structuring</h5>
-								</div>
-							</div>
-						</div>
-						<div class="fw inside">
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Member-Oriented Communication Process</h5>
-								</div>
-							</div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Financial Discipline & Phased Execution</h5>
-								</div>
-							</div>
-							<div class="fw imgdesc wow fadeInUp slow animated">
-								<div class="desc">
-									<h5>Quality Supervision & Timely Completion</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="fw descmain" style="text-align: center; margin-top: 40px;">
-						<div class="desc fw wow fadeInUp slow animated">
-							<p>Our structured methodology ensures clarity, stability, and long-term value creation for
-								all stakeholders involved.</p>
-						</div>
-					</div>
+	<section class="fw partner-section" aria-label="Vision" style="padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; background: rgba(0,0,0,0.2);">
+		<div class="partner-section__watermark" aria-hidden="true" style="font-size: 15rem;">VISION</div>
+		<div class="container" style="position: relative; z-index: 2;">
+			<div data-reveal data-delay="1">
+				<div class="partner-section__eyebrow" style="justify-content: center; margin-bottom: 30px;">
+					<span class="partner-eyebrow-line"></span>
+					<span>Future Growth</span>
+					<span class="partner-eyebrow-line" style="margin-left: 10px;"></span>
+				</div>
+				<h2 style="font-family: var(--font-display); font-size: 3rem; color: var(--parchment); line-height: 1.2; margin-bottom: 30px;">
+					Our Trusted<br><em>Vision.</em>
+				</h2>
+				<div style="max-width: 800px; margin: 0 auto; font-size: 1.125rem; color: rgba(255,255,255,0.7); line-height: 1.8;">
+					<p style="margin-bottom: 20px;">The vision of Abhiraj Infra Realty is to build a trusted and professionally managed real estate development firm known for disciplined planning, responsible development, and transparent business practices.</p>
+					<p>The firm aims to contribute meaningfully to the transformation of urban environments by creating well-planned residential and commercial developments that support sustainable city growth.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="about_our_envir">
+	<section class="fw partner-section" aria-label="Founder's perspective" style="padding: 120px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+		<div class="partner-section__watermark" aria-hidden="true" style="font-size: 10rem;">PERSPECTIVE</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-5 col-12">
-					<div class="desc wow fadeInLeftBig slow animated">
-						<div class="title">
-							<h2>OUR <br><strong>ENVIRONMENT</strong></h2>
-							<div class="fw linedot">&nbsp;</div>
-							<p>At AbhiRaj Infra Realty, we work with the philosophy of maintaining the highest standards
-								of integrity, professionalism, customer attention,trust and commitment to be delivered.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-7 col-12">
-					<div class="img wow fadeInRightBig slow animated">
-						<img src="images/about/banner_our_environment.jpg" alt="banner our environment" width="100%"
-							align="left">
-					</div>
-				</div>
+			<div data-reveal>
+				<h2 style="font-family: var(--font-display); font-size: 2.5rem; font-style: italic; color: var(--parchment); line-height: 1.4; max-width: 900px; margin: 0 auto 30px;">
+					“At Abhiraj Infra Realty, we believe that successful developments are built on disciplined planning, transparent processes, and responsible execution that creates lasting value for communities.”
+				</h2>
 			</div>
 		</div>
 	</section>
 
-	<section class="fw missionvision">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="missionvisionmain fw">
-						<img src="images/about/banner_mission_vision.jpg" width="100%" alt="Banner Mission Vision"
-							class="d-none d-sm-block">
-						<img src="images/about/banner_mission_vision_mo.jpg" width="100%" alt="Banner Mission Vision"
-							class="d-block d-sm-none">
-						<div class="fw missionvisioncontent">
-							<div class="fw missionvisiondesc wow fadeInUp slow animated">
-								<div class="fw titlemain">
-									<h4>MISSION</h4>
-									<div class="linedot">&nbsp;</div>
-								</div>
-								<p>To deliver society redevelopment and joint venture projects through disciplined
-									planning, financial prudence, legal clarity, and transparent communication —
-									building long-term trust with communities and stakeholders.</p>
-							</div>
-							<div class="fw missionvisiondesc right wow fadeInUp slow animated">
-								<div class="fw titlemain">
-									<h4>VISION</h4>
-									<div class="linedot">&nbsp;</div>
-								</div>
-								<p>To create enduring landmarks through responsible redevelopment, disciplined
-									execution, and uncompromising quality — setting new benchmarks in transparency,
-									planning excellence, and sustainable value creation across Maharashtra.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+
 
 	<footer class="fw">
 		<div class="container">
@@ -333,25 +249,22 @@
 					<div class="fw footertop">
 						<div class="fw contactus">
 							<h2>CONTACT US</h2>
-							<p>Engage with Viraj Estates, where we create with the heart and build with the mind.</p>
+							<p>Engage with Abhiraj Infra Realty, where we create with the heart and build with the mind.</p>
 							<div class="getinbtn"><a class="getintouch_popup_link" rel="getintouchpopup"
 									href="javascipt:void(0)"><span>GET IN TOUCH</span></a></div>
-
-							<div class="fw footerlogo show-xs">
-								<a href="./"><img src="./images/logo.png"></a>
-							</div>
 						</div>
 						<div class="fw getin">
 							<ul>
-								<li><a class='active' href="./about#our-story">Our story<span>&nbsp;</span></a></li>
-								<li><a href="./projects/">Projects<span>&nbsp;</span></a></li>
-								<li><a href="./media#company-updates">Company Updates<span>&nbsp;</span></a></li>
-								<li><a href="./contact-us#project-locator">Project Locator<span>&nbsp;</span></a></li>
+								<!-- <li><a href="./about.html">About<span>&nbsp;</span></a></li>
+								<li><a href="./contact-us.html">Contact<span>&nbsp;</span></a></li> -->
 								<li><a href="javascipt:void(0);" class="linkpg" rel="privacy">Privacy
 										Policy<span>&nbsp;</span></a></li>
 								<li><a href="javascipt:void(0);" class="linkpg" rel="reraact">Rera
 										act<span>&nbsp;</span></a></li>
 							</ul>
+						</div>
+						<div class="fw footerlogo show-xs footer-logo-mobile">
+							<a href="./"><img src="./images/logo.png"></a>
 						</div>
 						<div class="fw footerlogo hide-xs">
 							<div class="insidedesc">
@@ -672,7 +585,7 @@
 	</div>
 
 	<!-- <a href="whatsapp:contact=015555555555@s.whatsapp.com&message="I'd like to chat with you" id="msg"> -->
-	<a href="https://wa.me/8551900900?text=I'd%20like%20to%20chat%20with%20you" target="_blank" id="msg">
+	<a href="https://wa.me/919637661116?text=I'd%20like%20to%20chat%20with%20you" target="_blank" id="msg">
 		<img src="./images/ic_msg.png" width="100%;">
 	</a>
 
@@ -820,6 +733,54 @@
 	<!-- <script type="text/javascript" src="./js/jquery.counterup.min.js"></script> -->
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script type="text/javascript" src="./js/main.js"></script>
+
+	<!-- Scroll-based header transparency + progress + Intersection Observer reveals -->
+	<script>
+		(function () {
+			// 1. Header: transparent → .scrolled + progress bar + height shrink
+			var header = document.querySelector('.header');
+			var prog = document.querySelector('.header-progress');
+			function onScroll() {
+				var s = window.scrollY;
+				// scrolled class
+				if (s > 60) {
+					header.classList.add('scrolled');
+				} else {
+					header.classList.remove('scrolled');
+				}
+				// scroll progress bar
+				if (prog) {
+					var max = document.body.scrollHeight - window.innerHeight;
+					var pct = max > 0 ? (s / max) * 100 : 0;
+					prog.style.width = pct + '%';
+				}
+			}
+			window.addEventListener('scroll', onScroll, { passive: true });
+			onScroll();
+
+			// 2. Intersection Observer for data-reveal elements
+			var revealEls = document.querySelectorAll('[data-reveal]');
+			if ('IntersectionObserver' in window && revealEls.length) {
+				var io = new IntersectionObserver(function (entries) {
+					entries.forEach(function (entry) {
+						if (entry.isIntersecting) {
+							var el = entry.target;
+							var delay = el.getAttribute('data-delay');
+							if (delay) {
+								el.style.transitionDelay = (parseInt(delay, 10) * 120) + 'ms';
+							}
+							el.classList.add('visible');
+							io.unobserve(el);
+						}
+					});
+				}, { threshold: 0.12 });
+				revealEls.forEach(function (el) { io.observe(el); });
+			} else {
+				// Fallback: show all immediately
+				revealEls.forEach(function (el) { el.classList.add('visible'); });
+			}
+		})();
+	</script>
 
 </body>
 
