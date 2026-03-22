@@ -103,6 +103,14 @@
   margin-left: 4%;
 }
 
+.ourStory .box .descmain .desc.about-text-columns {
+  width: 100%;
+  margin: 0;
+  padding: 40px 60px 0;
+  column-count: 2;
+  column-gap: 80px;
+}
+
 .ourStory .box .descmain .desc p {
   color: var(--ink);
   padding-bottom: 20px;
@@ -835,6 +843,13 @@
     margin: 0 0 0 -2px;
     background-color: var(--parchment);
     padding: 0 20px 0 2px;
+  }
+
+  .ourStory .box .descmain .desc.about-text-columns {
+    column-count: 1;
+    margin: 0;
+    padding: 20px 15px 0;
+    background-color: transparent;
   }
 
   .ourFounder {
