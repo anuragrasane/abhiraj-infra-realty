@@ -801,12 +801,12 @@
 /* ── Responsive ───────────────────────────────────────────── */
 @media only screen and (max-width: 768px) {
   .main2Banner .AboutSlider {
-    height: calc(100vh - 72px);
-    margin-top: 72px;
+    height: 100vh;
+    margin-top: 0;
   }
 
   .main2Banner .AboutSlider .banner {
-    height: calc(100vh - 72px);
+    height: 100vh;
   }
 
   .main2Banner .content .description {
