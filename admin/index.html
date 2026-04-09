@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin Panel | Abhiraj Infra Realty</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+	
+	<!-- Design System -->
+	<link rel="stylesheet" type="text/css" href="../css/design-system.css">
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	
+	<!-- Admin Styles -->
+	<link rel="stylesheet" type="text/css" href="./admin.css">
+</head>
+<body>
+	<!-- Login Screen -->
+	<div id="loginScreen" class="login-screen show">
+		<div class="login-container">
+			<div class="login-card">
+				<div class="login-logo">
+					<img src="../images/logo.png" alt="Abhiraj Infra Realty" class="admin-logo">
+					<span>Admin Panel</span>
+				</div>
+				<h1>Welcome Back</h1>
+				<p>Sign in to manage your projects and portfolio.</p>
+				
+				<form id="loginForm">
+					<div class="form-group">
+						<label for="adminPass">Admin Password</label>
+						<input type="password" id="adminPass" placeholder="Enter admin password" required autocomplete="off">
+						<div class="login-error" id="loginError" style="display:none;">Incorrect password. Please try again.</div>
+					</div>
+					<button type="submit" class="btn btn-primary btn-full">Sign In →</button>
+				</form>
+				
+				<div class="login-hint">
+					<p><small>Demo password: <code>admin@2025</code></small></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Admin Dashboard -->
+	<div id="adminDashboard" class="admin-dashboard" style="display:none;">
+		<!-- Header -->
+		<header class="admin-header">
+			<div class="admin-header-content">
+				<div class="admin-logo-section">
+					<img src="../images/logo.png" alt="Abhiraj Infra Realty" class="admin-logo-small">
+					<span class="admin-title">Admin Panel</span>
+				</div>
+				<div class="admin-header-actions">
+					<button id="logoutBtn" class="btn btn-secondary">Logout</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main Content -->
+		<main class="admin-main">
+			<div class="admin-container">
+				<!-- Sidebar -->
+				<aside class="admin-sidebar">
+					<nav class="admin-nav">
+						<ul>
+							<li><a href="#projects-section" class="nav-link active" data-section="projects">📋 Projects</a></li>
+							<li><a href="javascript:void(0);" class="nav-link" data-section="settings">⚙️ Settings</a></li>
+						</ul>
+					</nav>
+				</aside>
+
+				<!-- Content Area -->
+				<div class="admin-content">
+					<!-- Projects Section -->
+					<section id="projects-section" class="admin-section active">
+						<div class="section-header">
+							<h2>Manage Projects</h2>
+							<button id="addProjectBtn" class="btn btn-primary">+ Add New Project</button>
+						</div>
+
+						<div class="projects-list" id="projectsList">
+							<!-- Projects will be loaded here -->
+						</div>
+					</section>
+
+					<!-- Settings Section -->
+					<section id="settings-section" class="admin-section" style="display:none;">
+						<div class="section-header">
+							<h2>Settings</h2>
+						</div>
+						
+						<div class="settings-group">
+							<h3>Database</h3>
+							<p>Reset all projects to default state.</p>
+							<button id="resetProjectsBtn" class="btn btn-danger">Reset to Defaults</button>
+						</div>
+
+						<div class="settings-group" style="margin-top: 30px;">
+							<h3>Export</h3>
+							<p>Download projects as JSON file.</p>
+							<button id="exportBtn" class="btn btn-secondary">Export Projects</button>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<!-- Project Modal -->
+	<div id="projectModal" class="modal" style="display:none;">
+		<div class="modal-overlay"></div>
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 id="modalTitle">Add New Project</h2>
+				<button id="closeModalBtn" class="modal-close">&times;</button>
+			</div>
+
+			<form id="projectForm">
+				<div class="form-group">
+					<label for="projectTitle">Project Title *</label>
+					<input type="text" id="projectTitle" placeholder="e.g., Rajyog Residential" required>
+				</div>
+
+				<div class="form-group">
+					<label for="projectTag">Project Category/Tag *</label>
+					<input type="text" id="projectTag" placeholder="e.g., Residential, Commercial" required>
+				</div>
+
+				<div class="form-group">
+					<label for="projectDesc">Description *</label>
+					<textarea id="projectDesc" placeholder="Brief project description" rows="3" required></textarea>
+				</div>
+
+				<div class="form-group">
+					<label for="projectImage">Project Image *</label>
+					<div class="image-upload-area" id="imageUploadArea">
+						<div class="upload-placeholder">
+							<p>📁 Drop image here or click to upload</p>
+							<small>Supports JPG, PNG (Max 5MB)</small>
+						</div>
+						<input type="file" id="projectImage" accept="image/*" style="display:none;" required>
+					</div>
+					<div id="imagePreview" class="image-preview" style="display:none;">
+						<img id="previewImg" src="" alt="preview">
+						<button type="button" class="btn btn-small btn-secondary" onclick="document.getElementById('projectImage').value=''; document.getElementById('imagePreview').style.display='none'; document.getElementById('imageUploadArea').style.display='block';">Change</button>
+					</div>
+				</div>
+
+				<div class="form-group checkbox">
+					<label for="projectFeatured">
+						<input type="checkbox" id="projectFeatured">
+						<span>Feature this project (show in featured section)</span>
+					</label>
+				</div>
+
+				<div class="form-group">
+					<label for="projectOrder">Display Order</label>
+					<input type="number" id="projectOrder" placeholder="0" min="0" value="0">
+				</div>
+
+				<div class="form-actions">
+					<button type="button" class="btn btn-secondary" onclick="document.getElementById('projectModal').style.display='none';">Cancel</button>
+					<button type="submit" class="btn btn-primary">Save Project</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../js/projects-data.js"></script>
+	<script src="./admin.js"></script>
+</body>
+</html>

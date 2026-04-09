@@ -62,6 +62,9 @@
 									<a class="getintouch_popup_link header-cta" rel="getintouchpopup"
 										href="javascript:void(0)"><span>GET IN TOUCH</span></a>
 								</li>
+								<li class="admin-link" style="margin-left: auto; padding-right: 10px;">
+									<a class="navlink" href="./admin/" title="Admin Panel" style="font-size: 12px; opacity: 0.6;">⚙️ ADMIN</a>
+								</li>
 							</ul>
 						</nav>
 					</header>
@@ -113,32 +116,8 @@
 		</div>
 	</section>
 
-	<section class="views_development" aria-label="Featured projects">
-		<div class="content">
-			<img src="./images/home/bg_rajyog.jpg" width="100%" alt="Rajyog residential project" loading="lazy">
-			<div class="desc">
-				<h4>Rajyog</h4>
-			</div>
-		</div>
-		<div class="content">
-			<img src="./images/home/bg_yashodhra_girls_hostel.jpg" width="100%" alt="Yashodhara Girls Hostel project"
-				loading="lazy">
-			<div class="desc">
-				<h4>Yashodhara Girls Hostel</h4>
-			</div>
-		</div>
-		<div class="content">
-			<img src="./images/home/sudhan_tower.jpg" width="100%" alt="Sudhan Tower project" loading="lazy">
-			<div class="desc">
-				<h4>Sudhan Tower</h4>
-			</div>
-		</div>
-		<div class="content">
-			<img src="./images/home/mr_nikam.jpg" width="100%" alt="Mr. Nikam residence" loading="lazy">
-			<div class="desc">
-				<h4>Mr. Nikam</h4>
-			</div>
-		</div>
+	<section class="views_development" id="featuredProjectsSection" aria-label="Featured projects">
+		<!-- Featured projects will be loaded here dynamically -->
 	</section>
 
 	<section class="fw view-more-projects-section" style="padding: 50px 0; text-align: center; background-color: var(--obsidian);">
@@ -974,6 +953,95 @@
 				});
 			}
 		})();
+	</script>
+
+	<!-- Project detail modal -->
+	<div id="projectDetailModal" class="project-detail-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.85); z-index: 1000; overflow-y: auto;">
+		<div class="project-detail-content" style="background-color: var(--obsidian); border-radius: 12px; overflow: hidden; max-width: 900px; width: 90%; max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8); margin: auto; animation: slideUp 0.4s ease-out;">
+			<div style="position: relative; height: 400px; overflow: hidden;">
+				<img id="detailImage" src="" alt="Project image" style="width: 100%; height: 100%; object-fit: cover;">
+				<button id="detailCloseBtn" style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; background-color: rgba(0, 0, 0, 0.6); border: none; border-radius: 50%; color: #fff; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background-color 0.2s ease; z-index: 10;">&times;</button>
+			</div>
+			<div style="padding: 50px; overflow-y: auto; flex: 1;">
+				<span id="detailTag" style="display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); background-color: rgba(212, 165, 116, 0.1); padding: 8px 16px; border-radius: 4px; margin-bottom: 20px;"></span>
+				<h2 id="detailTitle" style="font-size: 2.5rem; font-family: var(--font-display); color: var(--parchment); margin: 0 0 20px 0; text-transform: uppercase; letter-spacing: 1px;"></h2>
+				<p id="detailDescription" style="font-size: 1rem; line-height: 1.8; color: #ddd; margin: 0 0 30px 0;"></p>
+				<div style="height: 1px; background: linear-gradient(to right, var(--gold), transparent); margin: 30px 0;"></div>
+				<p style="color: #999; font-size: 14px; margin: 0; text-align: center;">Project managed by Abhiraj Infra Realty</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load projects data and featured projects -->
+	<script src="./js/projects-data.js"></script>
+	<script>
+		// Project detail modal handler
+		const ProjectModal = {
+			modal: null,
+			closeBtn: null,
+			
+			init() {
+				this.modal = document.getElementById('projectDetailModal');
+				this.closeBtn = document.getElementById('detailCloseBtn');
+				
+				this.closeBtn.addEventListener('click', () => this.close());
+				this.modal.addEventListener('click', (e) => {
+					if (e.target === this.modal) this.close();
+				});
+				
+				document.addEventListener('keydown', (e) => {
+					if (e.key === 'Escape') this.close();
+				});
+			},
+			
+			open(project) {
+				document.getElementById('detailImage').src = project.image;
+				document.getElementById('detailImage').onerror = function() { 
+					this.src = './images/logo.png'; 
+				};
+				document.getElementById('detailTag').textContent = project.tag || 'Project';
+				document.getElementById('detailTitle').textContent = project.title;
+				document.getElementById('detailDescription').textContent = project.description;
+				
+				this.modal.style.display = 'flex';
+				this.modal.style.alignItems = 'center';
+				this.modal.style.justifyContent = 'center';
+				document.body.style.overflow = 'hidden';
+			},
+			
+			close() {
+				this.modal.style.display = 'none';
+				document.body.style.overflow = 'auto';
+			}
+		};
+		
+		// Load featured projects
+		document.addEventListener('DOMContentLoaded', function() {
+			ProjectModal.init();
+			
+			const featuredProjects = ProjectsDB.getFeatured();
+			const section = document.getElementById('featuredProjectsSection');
+			
+			section.innerHTML = featuredProjects.map(project => `
+				<div class="content" data-project-id="${project.id}" style="cursor: pointer;">
+					<img src="${project.image}" width="100%" alt="${project.title}" loading="lazy" onerror="this.src='./images/logo.png'">
+					<div class="desc">
+						<h4>${project.title}</h4>
+					</div>
+				</div>
+			`).join('');
+			
+			// Attach click handlers to featured projects
+			section.querySelectorAll('.content').forEach(item => {
+				item.addEventListener('click', function() {
+					const projectId = this.dataset.projectId;
+					const project = featuredProjects.find(p => p.id === projectId);
+					if (project) {
+						ProjectModal.open(project);
+					}
+				});
+			});
+		});
 	</script>
 
 </body>
