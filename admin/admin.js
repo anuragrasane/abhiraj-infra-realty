@@ -27,7 +27,8 @@ const AdminPanel = {
       const parts = line.split('|');
       return {
         left: (parts[0] || '').trim(),
-        right: (parts[1] || '').trim()
+        middle: (parts[1] || '').trim(),
+        right: (parts[2] || '').trim()
       };
     }).filter(item => item.left || item.right);
   },
@@ -294,6 +295,7 @@ const AdminPanel = {
     document.getElementById('projectFeatured').checked = false;
     document.getElementById('projectOrder').value = '0';
     document.getElementById('projectStatus').value = 'ongoing';
+    document.getElementById('projectBrochurePdf').value = '';
     document.getElementById('projectModal').style.display = 'flex';
   },
 
@@ -313,6 +315,9 @@ const AdminPanel = {
     document.getElementById('projectOrder').value = project.order || '0';
     document.getElementById('projectStatus').value = project.status || 'ongoing';
     document.getElementById('projectBrochurePdf').value = project.brochurePdf || '';
+    document.getElementById('projectUnits').value = (project.units || [])
+      .map(unit => `${unit.type || ''}|${unit.carpetArea || ''}|${unit.balconyArea || ''}`)
+      .join('\n');
 
     const overview = project.overview || {};
     document.getElementById('projectType').value = overview.type || '';
@@ -347,11 +352,21 @@ const AdminPanel = {
       .map(n => `${n.place || ''}|${n.distance || ''}`)
       .join('\n');
 
+    document.getElementById('projectSustainability').value = (project.sustainability || []).join('\n');
+
     const parking = project.parking || {};
     document.getElementById('projectParkingType').value = parking.type || '';
-    document.getElementById('projectParkingImage').value = parking.image || '';
+    document.getElementById('projectEvCharging').checked = !!parking.evCharging;
+    document.getElementById('projectParkingPlanImage').value = parking.planImage || parking.image || '';
+
+    const developer = project.developer || {};
+    document.getElementById('developerName').value = developer.name || '';
+    document.getElementById('developerArchitect').value = developer.architect || '';
+    document.getElementById('developerStructuralConsultant').value = developer.structuralConsultant || '';
+    document.getElementById('developerLegalAdvisor').value = developer.legalAdvisor || '';
 
     const contact = project.contact || {};
+    document.getElementById('projectSalesPerson').value = contact.salesPerson || '';
     document.getElementById('projectPhone').value = contact.phone || '';
     document.getElementById('projectEmail').value = contact.email || '';
 
@@ -397,8 +412,12 @@ const AdminPanel = {
     };
 
     const highlights = this.splitByCommaOrLine(document.getElementById('projectHighlights').value);
+    const units = this.parsePairs(document.getElementById('projectUnits').value)
+      .map(item => ({ type: item.left, carpetArea: item.middle, balconyArea: item.right }))
+      .filter(item => item.type);
+
     const amenities = this.parsePairs(document.getElementById('projectAmenities').value)
-      .map(item => ({ name: item.left, icon: item.right }))
+      .map(item => ({ name: item.left, icon: item.middle || item.right }))
       .filter(item => item.name);
 
     const specifications = {
@@ -411,10 +430,12 @@ const AdminPanel = {
     };
 
     const floorPlans = this.parsePairs(document.getElementById('projectFloorPlans').value)
-      .map(item => ({ type: item.left, image: item.right }))
+      .map(item => ({ type: item.left, image: item.middle || item.right }))
       .filter(item => item.type || item.image);
 
     const gallery = this.splitByLine(document.getElementById('projectGallery').value);
+
+    const sustainability = this.splitByLine(document.getElementById('projectSustainability').value);
 
     const nearby = this.parsePairs(document.getElementById('projectNearby').value)
       .map(item => ({ place: item.left, distance: item.right }))
@@ -428,10 +449,20 @@ const AdminPanel = {
 
     const parking = {
       type: document.getElementById('projectParkingType').value.trim(),
-      image: document.getElementById('projectParkingImage').value.trim()
+      evCharging: document.getElementById('projectEvCharging').checked,
+      planImage: document.getElementById('projectParkingPlanImage').value.trim(),
+      image: document.getElementById('projectParkingPlanImage').value.trim()
+    };
+
+    const developer = {
+      name: document.getElementById('developerName').value.trim(),
+      architect: document.getElementById('developerArchitect').value.trim(),
+      structuralConsultant: document.getElementById('developerStructuralConsultant').value.trim(),
+      legalAdvisor: document.getElementById('developerLegalAdvisor').value.trim()
     };
 
     const contact = {
+      salesPerson: document.getElementById('projectSalesPerson').value.trim(),
       phone: document.getElementById('projectPhone').value.trim(),
       email: document.getElementById('projectEmail').value.trim()
     };
@@ -452,12 +483,15 @@ const AdminPanel = {
       image: imageData,
       overview,
       highlights,
+      units,
       amenities,
       specifications,
       floorPlans,
       gallery,
+      sustainability,
       location,
       parking,
+      developer,
       contact
     };
 

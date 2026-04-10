@@ -203,6 +203,12 @@
 					</div>
 				</div>
 
+				<h3 class="form-section-title">Units</h3>
+				<div class="form-group">
+					<label for="projectUnits">Unit Types (one per line as Type|Carpet Area|Balcony Area)</label>
+					<textarea id="projectUnits" rows="4" placeholder="1 BHK||&#10;2 BHK||"></textarea>
+				</div>
+
 				<h3 class="form-section-title">Highlights</h3>
 				<div class="form-group">
 					<label for="projectHighlights">Highlights (comma or newline separated)</label>
@@ -267,20 +273,56 @@
 					<textarea id="projectNearby" rows="3" placeholder="Highway|2 km&#10;Hospital|700 m"></textarea>
 				</div>
 
+				<h3 class="form-section-title">Sustainability</h3>
+				<div class="form-group">
+					<label for="projectSustainability">Sustainability Features (one per line)</label>
+					<textarea id="projectSustainability" rows="3" placeholder="Solar energy system for common lighting&#10;Rainwater harvesting"></textarea>
+				</div>
+
 				<h3 class="form-section-title">Parking</h3>
 				<div class="grid-2">
 					<div class="form-group">
 						<label for="projectParkingType">Parking Type</label>
 						<input type="text" id="projectParkingType" placeholder="Mechanical Parking">
 					</div>
+					<div class="form-group checkbox">
+						<label for="projectEvCharging">
+							<input type="checkbox" id="projectEvCharging">
+							<span>EV Charging Available</span>
+						</label>
+					</div>
 					<div class="form-group">
-						<label for="projectParkingImage">Parking Image URL</label>
-						<input type="text" id="projectParkingImage" placeholder="./images/parking/plan.jpg">
+						<label for="projectParkingPlanImage">Parking Plan Image URL</label>
+						<input type="text" id="projectParkingPlanImage" placeholder="./images/parking/plan.jpg">
+					</div>
+				</div>
+
+				<h3 class="form-section-title">Developer</h3>
+				<div class="grid-2">
+					<div class="form-group">
+						<label for="developerName">Developer Name</label>
+						<input type="text" id="developerName" placeholder="Somvijay Developers">
+					</div>
+					<div class="form-group">
+						<label for="developerArchitect">Architect</label>
+						<input type="text" id="developerArchitect" placeholder="PDP Architects">
+					</div>
+					<div class="form-group">
+						<label for="developerStructuralConsultant">Structural Consultant</label>
+						<input type="text" id="developerStructuralConsultant" placeholder="Er. Manish Bothra">
+					</div>
+					<div class="form-group">
+						<label for="developerLegalAdvisor">Legal Advisor</label>
+						<input type="text" id="developerLegalAdvisor" placeholder="Adv. Manoj Chavhan">
 					</div>
 				</div>
 
 				<h3 class="form-section-title">Contact</h3>
 				<div class="grid-2">
+					<div class="form-group">
+						<label for="projectSalesPerson">Sales Person</label>
+						<input type="text" id="projectSalesPerson" placeholder="Manish Dhivar">
+					</div>
 					<div class="form-group">
 						<label for="projectPhone">Sales Phone</label>
 						<input type="text" id="projectPhone" placeholder="9890666246">

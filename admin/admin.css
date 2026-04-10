@@ -574,6 +574,14 @@ body {
   gap: 0 14px;
 }
 
+.grid-2 .form-group.checkbox {
+  align-items: flex-end;
+}
+
+.grid-2 .form-group.checkbox label {
+  min-height: 42px;
+}
+
 #projectForm textarea {
   min-height: 84px;
 }
