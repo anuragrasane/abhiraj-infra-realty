@@ -33,6 +33,10 @@ const AdminPanel = {
     }).filter(item => item.left || item.right);
   },
 
+  isDataUrl(value) {
+    return typeof value === 'string' && value.startsWith('data:image/');
+  },
+
   /**
    * Initialize admin panel
    */
@@ -140,6 +144,7 @@ const AdminPanel = {
     // Image upload area
     const imageUploadArea = document.getElementById('imageUploadArea');
     const imageFileInput = document.getElementById('projectImage');
+    const imagePathInput = document.getElementById('projectImagePath');
 
     imageUploadArea.addEventListener('click', () => {
       imageFileInput.click();
@@ -167,6 +172,22 @@ const AdminPanel = {
     imageFileInput.addEventListener('change', (e) => {
       if (e.target.files.length > 0) {
         this.handleImageUpload(e.target.files[0]);
+      }
+    });
+
+    imagePathInput.addEventListener('input', (e) => {
+      const imagePath = e.target.value.trim();
+      const preview = document.getElementById('imagePreview');
+      const previewImg = document.getElementById('previewImg');
+
+      if (imagePath) {
+        imageFileInput.value = '';
+        imageFileInput.dataset.imageData = '';
+        previewImg.src = imagePath;
+        preview.style.display = 'block';
+        imageUploadArea.style.display = 'block';
+      } else if (!imageFileInput.dataset.imageData) {
+        preview.style.display = 'none';
       }
     });
 
@@ -211,6 +232,7 @@ const AdminPanel = {
     reader.onload = (e) => {
       const imageData = e.target.result;
       document.getElementById('projectImage').dataset.imageData = imageData;
+      document.getElementById('projectImagePath').value = '';
       
       // Show preview
       const preview = document.getElementById('imagePreview');
@@ -292,6 +314,7 @@ const AdminPanel = {
     document.getElementById('imagePreview').style.display = 'none';
     document.getElementById('imageUploadArea').style.display = 'block';
     document.getElementById('projectImage').removeAttribute('data-image-data');
+    document.getElementById('projectImagePath').value = '';
     document.getElementById('projectFeatured').checked = false;
     document.getElementById('projectOrder').value = '0';
     document.getElementById('projectStatus').value = 'ongoing';
@@ -315,6 +338,7 @@ const AdminPanel = {
     document.getElementById('projectOrder').value = project.order || '0';
     document.getElementById('projectStatus').value = project.status || 'ongoing';
     document.getElementById('projectBrochurePdf').value = project.brochurePdf || '';
+    document.getElementById('projectImagePath').value = this.isDataUrl(project.image) ? '' : (project.image || '');
     document.getElementById('projectUnits').value = (project.units || [])
       .map(unit => `${unit.type || ''}|${unit.carpetArea || ''}|${unit.balconyArea || ''}`)
       .join('\n');
@@ -371,12 +395,12 @@ const AdminPanel = {
     document.getElementById('projectEmail').value = contact.email || '';
 
     // Show image preview
-    document.getElementById('projectImage').dataset.imageData = project.image;
+    document.getElementById('projectImage').dataset.imageData = this.isDataUrl(project.image) ? project.image : '';
     const preview = document.getElementById('imagePreview');
     const previewImg = document.getElementById('previewImg');
     previewImg.src = project.image;
     preview.style.display = 'block';
-    document.getElementById('imageUploadArea').style.display = 'none';
+    document.getElementById('imageUploadArea').style.display = this.isDataUrl(project.image) ? 'none' : 'block';
 
     document.getElementById('projectModal').style.display = 'flex';
   },
@@ -400,7 +424,9 @@ const AdminPanel = {
     const order = parseInt(document.getElementById('projectOrder').value) || 0;
     const status = document.getElementById('projectStatus').value || 'ongoing';
     const brochurePdf = document.getElementById('projectBrochurePdf').value.trim();
+    const imagePath = document.getElementById('projectImagePath').value.trim();
     const imageData = document.getElementById('projectImage').dataset.imageData;
+    const image = imagePath || imageData;
 
     const overview = {
       type: document.getElementById('projectType').value.trim(),
@@ -467,8 +493,8 @@ const AdminPanel = {
       email: document.getElementById('projectEmail').value.trim()
     };
 
-    if (!title || !tag || !description || !imageData) {
-      alert('Please fill in all required fields and upload an image');
+    if (!title || !tag || !description || !image) {
+      alert('Please fill in all required fields and provide an image path or upload an image');
       return;
     }
 
@@ -480,7 +506,7 @@ const AdminPanel = {
       order,
       status,
       brochurePdf,
-      image: imageData,
+      image,
       overview,
       highlights,
       units,

@@ -34,6 +34,9 @@
 						<div class="login-error" id="loginError" style="display:none;">Incorrect password. Please try again.</div>
 					</div>
 					<button type="submit" class="btn btn-primary btn-full">Sign In →</button>
+					<div class="login-actions">
+						<a href="../index.html" class="btn btn-secondary btn-full">← Back to Home</a>
+					</div>
 				</form>
 				
 				<div class="login-hint">
@@ -136,16 +139,18 @@
 
 				<div class="form-group">
 					<label for="projectImage">Project Image *</label>
+					<input type="text" id="projectImagePath" placeholder="e.g., ./images/projects/covers/rajyog-cover.jpg">
+					<small>Use image paths from <strong>images/projects/covers</strong> (recommended) or upload below.</small>
 					<div class="image-upload-area" id="imageUploadArea">
 						<div class="upload-placeholder">
 							<p>📁 Drop image here or click to upload</p>
 							<small>Supports JPG, PNG (Max 5MB)</small>
 						</div>
-						<input type="file" id="projectImage" accept="image/*" style="display:none;" required>
+						<input type="file" id="projectImage" accept="image/*" style="display:none;">
 					</div>
 					<div id="imagePreview" class="image-preview" style="display:none;">
 						<img id="previewImg" src="" alt="preview">
-						<button type="button" class="btn btn-small btn-secondary" onclick="document.getElementById('projectImage').value=''; document.getElementById('imagePreview').style.display='none'; document.getElementById('imageUploadArea').style.display='block';">Change</button>
+						<button type="button" class="btn btn-small btn-secondary" onclick="document.getElementById('projectImage').value=''; document.getElementById('projectImage').dataset.imageData=''; document.getElementById('projectImagePath').value=''; document.getElementById('imagePreview').style.display='none'; document.getElementById('imageUploadArea').style.display='block';">Change</button>
 					</div>
 				</div>
 

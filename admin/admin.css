@@ -200,6 +200,10 @@ body {
   width: 100%;
 }
 
+.login-actions {
+  margin-top: 10px;
+}
+
 .btn-icon {
   padding: 8px 12px;
   font-size: 16px;
