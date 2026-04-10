@@ -423,6 +423,7 @@ body {
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -509,7 +510,7 @@ body {
   background-color: #fff;
   border-radius: 12px;
   width: 90%;
-  max-width: 600px;
+  max-width: 920px;
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -551,6 +552,30 @@ body {
 
 #projectForm {
   padding: 24px;
+}
+
+.form-section-title {
+  font-size: 16px;
+  color: #1a1a1a;
+  margin: 22px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #e1d7c6;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+#projectForm .form-section-title:first-child {
+  margin-top: 0;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 14px;
+}
+
+#projectForm textarea {
+  min-height: 84px;
 }
 
 .image-upload-area {
@@ -678,6 +703,10 @@ body {
 
   .modal-content {
     width: 95%;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
   }
 }
 

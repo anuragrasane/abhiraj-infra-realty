@@ -118,6 +118,7 @@
 			</div>
 
 			<form id="projectForm">
+				<h3 class="form-section-title">Basic Info</h3>
 				<div class="form-group">
 					<label for="projectTitle">Project Title *</label>
 					<input type="text" id="projectTitle" placeholder="e.g., Rajyog Residential" required>
@@ -158,6 +159,136 @@
 				<div class="form-group">
 					<label for="projectOrder">Display Order</label>
 					<input type="number" id="projectOrder" placeholder="0" min="0" value="0">
+				</div>
+
+				<div class="form-group">
+					<label for="projectStatus">Project Status</label>
+					<select id="projectStatus">
+						<option value="ongoing">Ongoing</option>
+						<option value="completed">Completed</option>
+						<option value="upcoming">Upcoming</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="projectBrochurePdf">Brochure PDF URL</label>
+					<input type="text" id="projectBrochurePdf" placeholder="e.g., ./pdf/rajyog-brochure.pdf">
+				</div>
+
+				<h3 class="form-section-title">Overview</h3>
+				<div class="grid-2">
+					<div class="form-group">
+						<label for="projectType">Project Type</label>
+						<input type="text" id="projectType" placeholder="Residential">
+					</div>
+					<div class="form-group">
+						<label for="projectConfig">Configuration</label>
+						<input type="text" id="projectConfig" placeholder="1 BHK / 2 BHK">
+					</div>
+					<div class="form-group">
+						<label for="totalFloors">Total Floors</label>
+						<input type="number" id="totalFloors" placeholder="7" min="0">
+					</div>
+					<div class="form-group">
+						<label for="totalUnits">Total Units</label>
+						<input type="number" id="totalUnits" placeholder="42" min="0">
+					</div>
+					<div class="form-group">
+						<label for="possession">Possession</label>
+						<input type="text" id="possession" placeholder="Dec 2026">
+					</div>
+					<div class="form-group">
+						<label for="reraNumber">RERA Number</label>
+						<input type="text" id="reraNumber" placeholder="MAHARERA123456">
+					</div>
+				</div>
+
+				<h3 class="form-section-title">Highlights</h3>
+				<div class="form-group">
+					<label for="projectHighlights">Highlights (comma or newline separated)</label>
+					<textarea id="projectHighlights" rows="3" placeholder="Prime location, EV charging, Solar powered common areas"></textarea>
+				</div>
+
+				<h3 class="form-section-title">Amenities</h3>
+				<div class="form-group">
+					<label for="projectAmenities">Amenities (one per line as Name|IconURL)</label>
+					<textarea id="projectAmenities" rows="4" placeholder="CCTV Security|./images/icons/cctv.svg&#10;Lift with Backup|./images/icons/lift.svg"></textarea>
+				</div>
+
+				<h3 class="form-section-title">Specifications</h3>
+				<div class="form-group">
+					<label for="specKitchen">Kitchen (one per line)</label>
+					<textarea id="specKitchen" rows="2" placeholder="Granite platform&#10;Stainless steel sink"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="specFlooring">Flooring (one per line)</label>
+					<textarea id="specFlooring" rows="2" placeholder="Vitrified tiles flooring"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="specBathroom">Bathroom (one per line)</label>
+					<textarea id="specBathroom" rows="2" placeholder="Anti skid ceramic flooring"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="specElectrification">Electrification (one per line)</label>
+					<textarea id="specElectrification" rows="2" placeholder="Concealed wiring"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="specDoorsWindows">Doors & Windows (one per line)</label>
+					<textarea id="specDoorsWindows" rows="2" placeholder="Powder-coated windows"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="specStructure">Structure (one per line)</label>
+					<textarea id="specStructure" rows="2" placeholder="RCC framed structure"></textarea>
+				</div>
+
+				<h3 class="form-section-title">Floor Plans</h3>
+				<div class="form-group">
+					<label for="projectFloorPlans">Floor Plans (one per line as Type|ImageURL)</label>
+					<textarea id="projectFloorPlans" rows="4" placeholder="1 BHK|./images/plans/1bhk.jpg&#10;2 BHK|./images/plans/2bhk.jpg"></textarea>
+				</div>
+
+				<h3 class="form-section-title">Gallery</h3>
+				<div class="form-group">
+					<label for="projectGallery">Gallery Images (one URL per line)</label>
+					<textarea id="projectGallery" rows="4" placeholder="./images/gallery/img1.jpg&#10;./images/gallery/img2.jpg"></textarea>
+				</div>
+
+				<h3 class="form-section-title">Location</h3>
+				<div class="form-group">
+					<label for="projectAddress">Address</label>
+					<input type="text" id="projectAddress" placeholder="Rasbihari Road, Nashik">
+				</div>
+				<div class="form-group">
+					<label for="projectMapEmbed">Google Map Embed URL</label>
+					<textarea id="projectMapEmbed" rows="2" placeholder="https://maps.google.com/... (embed URL)"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="projectNearby">Nearby Places (one per line as Place|Distance)</label>
+					<textarea id="projectNearby" rows="3" placeholder="Highway|2 km&#10;Hospital|700 m"></textarea>
+				</div>
+
+				<h3 class="form-section-title">Parking</h3>
+				<div class="grid-2">
+					<div class="form-group">
+						<label for="projectParkingType">Parking Type</label>
+						<input type="text" id="projectParkingType" placeholder="Mechanical Parking">
+					</div>
+					<div class="form-group">
+						<label for="projectParkingImage">Parking Image URL</label>
+						<input type="text" id="projectParkingImage" placeholder="./images/parking/plan.jpg">
+					</div>
+				</div>
+
+				<h3 class="form-section-title">Contact</h3>
+				<div class="grid-2">
+					<div class="form-group">
+						<label for="projectPhone">Sales Phone</label>
+						<input type="text" id="projectPhone" placeholder="9890666246">
+					</div>
+					<div class="form-group">
+						<label for="projectEmail">Sales Email</label>
+						<input type="email" id="projectEmail" placeholder="sales@example.com">
+					</div>
 				</div>
 
 				<div class="form-actions">

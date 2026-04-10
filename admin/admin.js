@@ -8,6 +8,30 @@ const AdminPanel = {
   AUTH_KEY: 'abhiraj_admin_auth',
   currentEditingId: null,
 
+  splitByLine(text) {
+    return (text || '')
+      .split('\n')
+      .map(item => item.trim())
+      .filter(Boolean);
+  },
+
+  splitByCommaOrLine(text) {
+    return (text || '')
+      .split(/\n|,/)
+      .map(item => item.trim())
+      .filter(Boolean);
+  },
+
+  parsePairs(text) {
+    return this.splitByLine(text).map(line => {
+      const parts = line.split('|');
+      return {
+        left: (parts[0] || '').trim(),
+        right: (parts[1] || '').trim()
+      };
+    }).filter(item => item.left || item.right);
+  },
+
   /**
    * Initialize admin panel
    */
@@ -51,7 +75,8 @@ const AdminPanel = {
    * Show login screen
    */
   showLogin() {
-    document.getElementById('loginScreen').classList.add('show');
+    document.getElementById('loginScreen').classList.remove('hide');
+    document.getElementById('loginScreen').style.display = 'flex';
     document.getElementById('adminDashboard').style.display = 'none';
     document.getElementById('adminPass').value = '';
     document.getElementById('loginError').style.display = 'none';
@@ -61,7 +86,8 @@ const AdminPanel = {
    * Show dashboard
    */
   showDashboard() {
-    document.getElementById('loginScreen').classList.remove('show');
+    document.getElementById('loginScreen').classList.add('hide');
+    document.getElementById('loginScreen').style.display = 'none';
     document.getElementById('adminDashboard').style.display = 'flex';
     this.loadProjects();
   },
@@ -267,6 +293,7 @@ const AdminPanel = {
     document.getElementById('projectImage').removeAttribute('data-image-data');
     document.getElementById('projectFeatured').checked = false;
     document.getElementById('projectOrder').value = '0';
+    document.getElementById('projectStatus').value = 'ongoing';
     document.getElementById('projectModal').style.display = 'flex';
   },
 
@@ -284,6 +311,49 @@ const AdminPanel = {
     document.getElementById('projectDesc').value = project.description;
     document.getElementById('projectFeatured').checked = project.featured || false;
     document.getElementById('projectOrder').value = project.order || '0';
+    document.getElementById('projectStatus').value = project.status || 'ongoing';
+    document.getElementById('projectBrochurePdf').value = project.brochurePdf || '';
+
+    const overview = project.overview || {};
+    document.getElementById('projectType').value = overview.type || '';
+    document.getElementById('projectConfig').value = overview.configuration || '';
+    document.getElementById('totalFloors').value = overview.totalFloors || '';
+    document.getElementById('totalUnits').value = overview.totalUnits || '';
+    document.getElementById('possession').value = overview.possession || '';
+    document.getElementById('reraNumber').value = overview.rera || '';
+
+    document.getElementById('projectHighlights').value = (project.highlights || []).join('\n');
+    document.getElementById('projectAmenities').value = (project.amenities || [])
+      .map(a => `${a.name || ''}|${a.icon || ''}`)
+      .join('\n');
+
+    const specs = project.specifications || {};
+    document.getElementById('specKitchen').value = (specs.kitchen || []).join('\n');
+    document.getElementById('specFlooring').value = (specs.flooring || []).join('\n');
+    document.getElementById('specBathroom').value = (specs.bathroom || []).join('\n');
+    document.getElementById('specElectrification').value = (specs.electrification || []).join('\n');
+    document.getElementById('specDoorsWindows').value = (specs.doorsWindows || []).join('\n');
+    document.getElementById('specStructure').value = (specs.structure || []).join('\n');
+
+    document.getElementById('projectFloorPlans').value = (project.floorPlans || [])
+      .map(fp => `${fp.type || ''}|${fp.image || ''}`)
+      .join('\n');
+    document.getElementById('projectGallery').value = (project.gallery || []).join('\n');
+
+    const location = project.location || {};
+    document.getElementById('projectAddress').value = location.address || '';
+    document.getElementById('projectMapEmbed').value = location.mapEmbed || '';
+    document.getElementById('projectNearby').value = (location.nearby || [])
+      .map(n => `${n.place || ''}|${n.distance || ''}`)
+      .join('\n');
+
+    const parking = project.parking || {};
+    document.getElementById('projectParkingType').value = parking.type || '';
+    document.getElementById('projectParkingImage').value = parking.image || '';
+
+    const contact = project.contact || {};
+    document.getElementById('projectPhone').value = contact.phone || '';
+    document.getElementById('projectEmail').value = contact.email || '';
 
     // Show image preview
     document.getElementById('projectImage').dataset.imageData = project.image;
@@ -313,7 +383,58 @@ const AdminPanel = {
     const description = document.getElementById('projectDesc').value.trim();
     const featured = document.getElementById('projectFeatured').checked;
     const order = parseInt(document.getElementById('projectOrder').value) || 0;
+    const status = document.getElementById('projectStatus').value || 'ongoing';
+    const brochurePdf = document.getElementById('projectBrochurePdf').value.trim();
     const imageData = document.getElementById('projectImage').dataset.imageData;
+
+    const overview = {
+      type: document.getElementById('projectType').value.trim(),
+      configuration: document.getElementById('projectConfig').value.trim(),
+      totalFloors: document.getElementById('totalFloors').value.trim(),
+      totalUnits: document.getElementById('totalUnits').value.trim(),
+      possession: document.getElementById('possession').value.trim(),
+      rera: document.getElementById('reraNumber').value.trim()
+    };
+
+    const highlights = this.splitByCommaOrLine(document.getElementById('projectHighlights').value);
+    const amenities = this.parsePairs(document.getElementById('projectAmenities').value)
+      .map(item => ({ name: item.left, icon: item.right }))
+      .filter(item => item.name);
+
+    const specifications = {
+      kitchen: this.splitByLine(document.getElementById('specKitchen').value),
+      flooring: this.splitByLine(document.getElementById('specFlooring').value),
+      bathroom: this.splitByLine(document.getElementById('specBathroom').value),
+      electrification: this.splitByLine(document.getElementById('specElectrification').value),
+      doorsWindows: this.splitByLine(document.getElementById('specDoorsWindows').value),
+      structure: this.splitByLine(document.getElementById('specStructure').value)
+    };
+
+    const floorPlans = this.parsePairs(document.getElementById('projectFloorPlans').value)
+      .map(item => ({ type: item.left, image: item.right }))
+      .filter(item => item.type || item.image);
+
+    const gallery = this.splitByLine(document.getElementById('projectGallery').value);
+
+    const nearby = this.parsePairs(document.getElementById('projectNearby').value)
+      .map(item => ({ place: item.left, distance: item.right }))
+      .filter(item => item.place || item.distance);
+
+    const location = {
+      address: document.getElementById('projectAddress').value.trim(),
+      mapEmbed: document.getElementById('projectMapEmbed').value.trim(),
+      nearby
+    };
+
+    const parking = {
+      type: document.getElementById('projectParkingType').value.trim(),
+      image: document.getElementById('projectParkingImage').value.trim()
+    };
+
+    const contact = {
+      phone: document.getElementById('projectPhone').value.trim(),
+      email: document.getElementById('projectEmail').value.trim()
+    };
 
     if (!title || !tag || !description || !imageData) {
       alert('Please fill in all required fields and upload an image');
@@ -326,7 +447,18 @@ const AdminPanel = {
       description,
       featured,
       order,
-      image: imageData
+      status,
+      brochurePdf,
+      image: imageData,
+      overview,
+      highlights,
+      amenities,
+      specifications,
+      floorPlans,
+      gallery,
+      location,
+      parking,
+      contact
     };
 
     if (this.currentEditingId) {
