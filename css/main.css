@@ -25,20 +25,6 @@
   display: none !important;
 }
 
-/* ── WhatsApp Float ───────────────────────────────────────── */
-#msg {
-  position: fixed;
-  right: 40px;
-  bottom: 32px;
-  z-index: 1100;
-  width: 56px;
-  transition: transform var(--dur-base) var(--ease-out);
-}
-
-#msg:hover {
-  transform: scale(1.1);
-}
-
 /* ── HEADER ───────────────────────────────────────────────── */
 
 /* Scroll progress bar — 1 px gold line at the very top */
@@ -869,12 +855,6 @@ footer .copyright p a:hover {
 
 /* ── RESPONSIVE MOBILE ────────────────────────────────────── */
 @media (max-width: 768px) {
-  #msg {
-    right: 20px;
-    bottom: 100px;
-    width: 40px;
-  }
-
   .hide-xs {
     display: none !important;
   }
