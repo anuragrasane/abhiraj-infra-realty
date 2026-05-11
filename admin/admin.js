@@ -4,7 +4,7 @@
  */
 
 const AdminPanel = {
-  ADMIN_PASSWORD: 'admin@2025',
+  ADMIN_PASSWORD: '@bhiRajInfra@2026',
   AUTH_KEY: 'abhiraj_admin_auth',
   currentEditingId: null,
 
